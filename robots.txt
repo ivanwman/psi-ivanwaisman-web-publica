@@ -1,0 +1,13 @@
+# Todo lo que no es la home queda fuera de Google mediante `X-Robots-Tag: noindex`
+# (ver vercel.json) y `<meta name="robots">` en cada página, NO mediante Disallow.
+#
+# Disallow impide RASTREAR, no INDEXAR: Google puede indexar una URL bloqueada si la
+# descubre por un enlace, y el bloqueo le impide leer el noindex o ver que da 404. Así fue
+# como una URL muerta del screener C-SSRS quedó atrapada en el índice siendo el único
+# resultado del sitio. Para desindexar algo hay que DEJARLO rastrear y servirle noindex.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://psi.ivanwaisman.com/sitemap.xml

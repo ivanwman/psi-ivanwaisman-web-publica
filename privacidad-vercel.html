@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Está para cumplir, no para posicionar: no aporta al SEO y compite con la landing
+         por atención de Google. Accesible para quien la busca, invisible para el buscador. -->
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" href="https://psi.ivanwaisman.com/favicon.png" type="image/png" />
+    <title>Política de Tratamiento de Datos · Iván Waisman</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+      :root {
+        --bg: #efe3d2;
+        --card: rgba(255, 252, 248, 0.96);
+        --text: #251d17;
+        --muted: #695a4d;
+        --accent: #b88656;
+        --accent-soft: rgba(184, 134, 86, 0.12);
+        --border: rgba(110, 83, 59, 0.16);
+        --border-strong: rgba(110, 83, 59, 0.24);
+        --shadow: 0 30px 70px rgba(83, 56, 34, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Manrope', sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.94), transparent 18%),
+          linear-gradient(180deg, #f6fbff 0%, #e8f3ff 46%, #fbf5ec 100%);
+        background-attachment: fixed;
+        line-height: 1.68;
+      }
+
+      .shell {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 80px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 28px;
+        font-size: 12.5px;
+      }
+
+      .topbar a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.22s ease, color 0.22s ease;
+      }
+
+      .topbar a:hover { color: var(--text); border-color: var(--border-strong); }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        padding: clamp(24px, 5vw, 52px);
+      }
+
+      h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(28px, 5vw, 40px);
+        font-weight: 600;
+        margin: 0 0 6px;
+        letter-spacing: 0.01em;
+      }
+
+      .doc-meta {
+        color: var(--muted);
+        font-size: 12.5px;
+        margin: 0 0 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(21px, 3.4vw, 26px);
+        font-weight: 600;
+        margin: 40px 0 12px;
+        padding-top: 6px;
+      }
+
+      h3 {
+        font-size: 14.5px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+        color: var(--text);
+      }
+
+      p, li { font-size: 14.5px; color: var(--text); margin: 0 0 12px; }
+
+      ul { padding-left: 20px; margin: 0 0 14px; }
+      li { margin-bottom: 7px; }
+
+      strong { font-weight: 700; }
+
+      a { color: var(--accent); }
+
+      /* Resumen inicial: lo que la mayoría va a leer de verdad. */
+      .resumen {
+        background: var(--accent-soft);
+        border: 1px solid rgba(184, 134, 86, 0.28);
+        border-radius: 16px;
+        padding: 22px 24px;
+        margin: 0 0 8px;
+      }
+
+      .resumen h2 { margin-top: 0; }
+      .resumen ol { padding-left: 20px; margin: 0; }
+      .resumen li { margin-bottom: 10px; }
+
+      /* Tablas: en móvil scrollean solas en vez de romper el ancho de la página. */
+      .tabla-wrap { overflow-x: auto; margin: 0 0 18px; }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 460px;
+        font-size: 13px;
+      }
+
+      th, td {
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      th {
+        font-weight: 700;
+        color: var(--muted);
+        font-size: 11.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <a href="/">← Volver al inicio</a>
+        <a href="/privacy">English</a>
+      </div>
+
+      <main class="card">
+        <h1>Política de Tratamiento de Datos Personales</h1>
+        <p class="doc-meta">Versión v1 · Última actualización: julio de 2026</p>
+
+        <p>Esta plataforma <strong>no constituye un servicio de atención de urgencias ni de
+        emergencias</strong>, y <strong>no reemplaza a los servicios de emergencia médica o
+        psiquiátrica</strong>. Las solicitudes recibidas a través de los formularios se revisan de
+        forma diferida, y no existe atención inmediata.</p>
+        <p>Si el Usuario se encuentra en una situación de riesgo inmediato para su vida o su
+        integridad física, o para las de otra persona, <strong>debe contactar de manera prioritaria
+        con los servicios de emergencia locales</strong>. En Argentina, el 911 y, en materia de
+        conducta suicida, el 135 desde CABA y el conurbano bonaerense o el (011) 5275-1135 desde el
+        resto del país (Centro de Asistencia al Suicida). En España, el 112 y el 024 (Línea de
+        Atención a la Conducta Suicida). En cualquier otro país, el número de emergencias que
+        corresponda a su lugar de residencia.</p>
+
+        <section class="resumen">
+          <h2>Información básica sobre protección de datos</h2>
+          <div class="tabla-wrap">
+            <table>
+              <tbody>
+                <tr><th>Responsable</th><td>Iván Waisman, psicólogo</td></tr>
+                <tr><th>Finalidad</th><td>Prestación de servicios de atención y consultoría psicológica</td></tr>
+                <tr><th>Legitimación</th><td>Consentimiento del interesado, ejecución de un contrato y de medidas precontractuales a su petición, cumplimiento de obligaciones legales e interés legítimo</td></tr>
+                <tr><th>Destinatarios</th><td>No se ceden datos a terceros, salvo obligación legal. Se emplean proveedores tecnológicos como encargados del tratamiento (cláusula 5)</td></tr>
+                <tr><th>Derechos</th><td>Acceso, rectificación, supresión, limitación, portabilidad, oposición y revocación del consentimiento, así como reclamación ante la autoridad de control (cláusula 8)</td></tr>
+                <tr><th>Información adicional</th><td>La política completa se desarrolla a continuación</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <p style="margin-top:20px;">La aceptación de esta política es <strong>condición
+        necesaria</strong> para la cumplimentación del formulario de admisión. El Usuario que no
+        preste su conformidad puede contactar al Responsable por correo electrónico sin necesidad de
+        utilizar el sistema.</p>
+
+        <h2>1. Responsable del tratamiento</h2>
+        <!-- IDENTIFICACION:INICIO — GENERADO por build-privacidad.js desde las credenciales del
+             dashboard. No editar a mano: el próximo `npm run publish` lo pisa. -->
+        <div class="tabla-wrap">
+          <table>
+            <tbody>
+              <tr><th>Responsable</th><td>Iván Waisman, psicólogo</td></tr>
+              <tr><th>Identificación fiscal</th><td>CUIT 20-41680229-8 (Argentina) · NIE Z4550872-M (España)</td></tr>
+              <tr><th>Domicilio profesional (Argentina)</th><td>Ángel Gallardo 652, San Carlos de Bariloche, Río Negro, Argentina</td></tr>
+              <tr><th>Domicilio profesional (Unión Europea)</th><td>Carrer de Floridablanca 68, 08015 Barcelona, España</td></tr>
+              <tr><th>Matrícula profesional</th><td>Col·legi Oficial de Psicologia de Catalunya, Nº de colegiado 36779 · Colegio de Psicólogos de la Zona Andina, Nº de matrícula 2876</td></tr>
+              <tr><th>Correo de contacto</th><td><a href="mailto:psi.ivanwaisman@gmail.com">psi.ivanwaisman@gmail.com</a></td></tr>
+              <tr><th>Sitio web</th><td>psi.ivanwaisman.com</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- IDENTIFICACION:FIN -->
+        <p>El Responsable ejerce como profesional individual. El tratamiento de los datos y las
+        decisiones sobre los mismos corresponden exclusivamente a su persona. No existen otros
+        usuarios con acceso al sistema, sin perjuicio de los encargados de tratamiento enumerados en
+        la cláusula 5.</p>
+
+        <h2>2. Datos objeto de tratamiento</h2>
+        <p>El sistema recaba las siguientes categorías de datos de los Usuarios.</p>
+
+        <h3>2.1. Datos identificativos y de contacto</h3>
+        <p>Nombre, apellidos, dirección de correo electrónico, teléfono, documento de identidad,
+        domicilio y datos de la persona designada como contacto de emergencia (nombre, vínculo y
+        teléfono).</p>
+
+        <h3>2.2. Datos de categoría especial</h3>
+        <p>Los siguientes datos tienen la consideración de <strong>categoría especial</strong>
+        conforme al art. 9 RGPD y de <strong>datos sensibles</strong> conforme a los arts. 2 y 7 de
+        la Ley 25.326 (Argentina), y son objeto de protección reforzada:</p>
+        <ul>
+          <li><strong>Datos relativos a la salud:</strong> motivo de consulta y su detalle,
+          tratamientos previos, objetivos terapéuticos, expectativas respecto del tratamiento, otros
+          profesionales intervinientes, medicación y sustancias (denominación, dosis, frecuencia,
+          profesional prescriptor y motivo), cobertura sanitaria, centro hospitalario de preferencia,
+          respuestas al cuestionario de preferencias terapéuticas, y respuestas a los cuestionarios
+          de valoración, de dos tipos: un <strong>cuestionario posterior a cada sesión</strong>, sobre
+          el desarrollo y la utilidad de esa sesión; y un <strong>cuestionario de evolución y
+          alta</strong>, de periodicidad aproximadamente mensual, sobre la retroalimentación general
+          del proceso, la evolución percibida y el grado de ajuste del tratamiento.</li>
+          <li><strong>Datos relativos a la identidad de género.</strong> Se recaban con la finalidad
+          de dirigirse a la persona conforme a su identidad desde el primer contacto y de
+          contextualizar adecuadamente la atención. <strong>No inciden en modo alguno sobre el
+          precio</strong> (cláusula 4.4) ni se emplean con fines comerciales, publicitarios ni de
+          segmentación.</li>
+          <li>Los datos socioeconómicos enumerados en la cláusula 2.3, en la medida en que resulten
+          reveladores de la situación personal del Usuario.</li>
+        </ul>
+
+        <h3>2.3. Datos demográficos y socioeconómicos</h3>
+        <p>Fecha de nacimiento, estado civil, existencia de hijos y edades, país y ciudad de
+        residencia, país y ciudad de origen, ocupación, situación laboral, nivel educativo, capacidad
+        declarada de asumir un arancel privado y contexto económico declarado.</p>
+        <p>Estos datos cumplen una <strong>doble finalidad</strong>, que se hace constar expresamente
+        a los efectos del art. 13.1.c RGPD:</p>
+        <ul>
+          <li>Constituyen <strong>información clínicamente relevante</strong> para la evaluación y el
+          tratamiento.</li>
+          <li>Alimentan el <strong>cálculo automatizado descrito en la cláusula 4</strong>, cuya
+          finalidad exclusiva es valorar la aplicación de una <strong>reducción sobre la tarifa de
+          referencia</strong> del servicio a fin de <strong>garantizar la accesibilidad al
+          tratamiento</strong> en situaciones que podrían dificultarlo —desempleo, condición de
+          estudiante, precariedad laboral, migración reciente o residencia en países de menor nivel
+          de ingresos, entre otras. Estos datos <strong>no se emplean en ningún caso para incrementar
+          el precio</strong> por encima de la tarifa de referencia.</li>
+        </ul>
+
+        <h3>2.4. Datos técnicos</h3>
+        <p>El sistema registra, en cada acceso a los formularios y al portal del paciente: dirección
+        IP y localización aproximada derivada de la misma (país, región y ciudad); navegador y
+        dispositivo; idioma y zona horaria configurados en el dispositivo; e identificadores de
+        dispositivo y de sesión.</p>
+        <p><strong>Finalidad probatoria y de autenticación.</strong> Cuando el Usuario accede al
+        portal o confirma cualquier texto legal, el sistema
+        deja un <strong>registro tokenizado</strong> de dicho acto: asocia el acceso a una huella
+        criptográfica del token —que identifica de forma unívoca la sesión sin permitir su
+        reutilización— junto con la dirección IP, el dispositivo, la fecha y la <strong>huella
+        criptográfica (hash SHA-256) del texto exacto exhibido</strong>.</p>
+        <p>La finalidad de este registro es permitir acreditar, en caso de controversia y ante un
+        tercero (colegio profesional, autoridad de control u órgano judicial): que el acto fue
+        realizado por el Usuario titular de los datos <strong>y no por otra persona</strong>; qué
+        versión exacta del documento le fue exhibida y aceptada, y en qué fecha; y que el texto no ha
+        sido alterado con posterioridad a su aceptación. Este registro protege por igual al Usuario y
+        al Responsable.</p>
+
+        <h3>2.5. Formularios en curso y datos de comportamiento</h3>
+        <p>Durante la cumplimentación de los formularios, el sistema registra las respuestas
+        introducidas hasta cada momento, junto con los siguientes datos de uso:</p>
+        <ul>
+          <li>Tiempo de permanencia en cada paso y número de visitas a cada paso.</li>
+          <li>Tiempo de permanencia en cada campo y número de modificaciones o correcciones sobre el
+          mismo.</li>
+          <li>Tiempo transcurrido hasta la primera interacción del Usuario con el formulario.</li>
+          <li>Tiempo de uso efectivo, diferenciado del tiempo total de sesión.</li>
+          <li><strong>Paso y campo en que se interrumpe la cumplimentación</strong>, en su caso, y
+          momento de la interrupción.</li>
+        </ul>
+        <p><strong>Ausencia de datos identificativos.</strong> Este registro <strong>no comprende
+        datos identificativos</strong>. No se transmiten ni se almacenan el nombre, los apellidos, el
+        correo electrónico, el teléfono, el documento de identidad ni la fecha de nacimiento. De la
+        edad se conserva únicamente el número de años. Los datos identificativos se transmiten
+        <strong>con el envío del formulario</strong>, y no antes.</p>
+        <p>La información relativa a un <strong>formulario no enviado</strong> no está asociada a
+        dato identificativo alguno, ni a ningún registro que permita atribuirla a una persona
+        determinada. Tiene, por tanto, carácter <strong>anónimo</strong> (considerando 26 del RGPD),
+        y se conserva únicamente como estadística.</p>
+        <p>Con el envío del formulario, los datos identificativos quedan incorporados al tratamiento
+        y se rigen por lo dispuesto en las cláusulas 2.1 a 2.3 y por las bases jurídicas de la
+        cláusula 3.</p>
+        <p><strong>Finalidad.</strong> Estos datos se tratan con la finalidad de <strong>evaluar y
+        mejorar el diseño de los formularios y la calidad del servicio prestado</strong>, y de
+        <strong>identificar las barreras de acceso</strong> al mismo. En particular, el registro del
+        paso y del campo en que los Usuarios interrumpen la cumplimentación permite determinar:</p>
+        <ul>
+          <li>si alguna pregunta resulta confusa, excesiva o inadecuadamente formulada, y debe ser
+          modificada o suprimida;</li>
+          <li>si la extensión del formulario constituye en sí misma un obstáculo;</li>
+          <li>si el arancel comunicado opera como <strong>barrera económica de acceso</strong>, en
+          qué proporción de casos y respecto de qué perfiles. Esta información se emplea, en
+          coherencia con la finalidad de accesibilidad expresada en la cláusula 4.1, para revisar la
+          tarifa de referencia, los límites de reducción aplicables y la extensión del régimen de
+          becas, de modo que el precio no opere como impedimento de acceso al tratamiento para
+          quienes lo necesitan.</li>
+        </ul>
+        <p>Su análisis se realiza de forma <strong>agregada</strong>, orientado a detectar patrones
+        en el instrumento y en el servicio, y no en las personas individualmente consideradas.</p>
+        <p><strong>Exclusión de uso clínico.</strong> Los datos de comportamiento <strong>no se
+        incorporan a la historia clínica ni se utilizan como material de valoración clínica del
+        Usuario</strong>, ni se cruzan con sus datos de salud a efectos interpretativos.</p>
+        <p><strong>Reanudación de la cumplimentación.</strong> El Usuario que interrumpe un
+        formulario puede retomarlo desde el mismo dispositivo: lo introducido se conserva en el
+        navegador del propio Usuario, en su equipo, y no depende del registro descrito en esta
+        cláusula.</p>
+
+        <h3>2.6. Datos de uso del portal del paciente</h3>
+        <p>Respecto de los Usuarios que acceden al portal, el sistema registra los eventos de uso, la
+        duración de las visitas, el precio exhibido, las reservas y pagos comunicados, los
+        comprobantes aportados y los cuestionarios cumplimentados, junto con los datos técnicos de la
+        cláusula 2.4.</p>
+        <p>El acceso al portal se produce mediante un <strong>token individual firmado
+        criptográficamente</strong> y remitido al correo electrónico del Usuario. El registro de cada
+        acceso queda asociado a la huella de dicho token, con la doble finalidad de acreditar que las
+        actuaciones realizadas en el portal —reservas, comunicaciones de pago, aportación de
+        documentación y cumplimentación de cuestionarios— <strong>corresponden al Usuario titular y
+        no a un tercero</strong>, y de permitir detectar accesos no autorizados.</p>
+
+        <h3>2.7. Sitio web público y cookies</h3>
+        <p>El sitio web público emplea <strong>Google Analytics</strong> con finalidades estadísticas,
+        lo que implica el uso de cookies de terceros. Dichas cookies <strong>solo se instalan si el
+        Usuario presta su consentimiento</strong> mediante el aviso que se muestra en la primera
+        visita. El Usuario puede rechazarlas sin que ello afecte al funcionamiento del sitio, y puede
+        revocar su decisión en cualquier momento borrando las cookies de su navegador.</p>
+        <p>Los formularios de admisión, valoración y el portal del paciente <strong>no incorporan
+        herramientas de analítica ni tecnologías de seguimiento publicitario</strong> de ninguna
+        clase.</p>
+
+        <h2>3. Bases jurídicas del tratamiento</h2>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Tratamiento</th><th>Finalidad</th><th>Base jurídica</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Datos de salud, identidad de género y contenido clínico</td>
+                <td>Evaluación, tratamiento y llevanza de la historia clínica</td>
+                <td><strong>Consentimiento explícito</strong> (art. 9.2.a RGPD) y <strong>art. 7 de
+                la Ley 25.326</strong> (Argentina), recabado mediante casilla específica e
+                independiente en el formulario. Subsidiariamente, asistencia sanitaria prestada por
+                profesional sujeto a secreto (arts. 9.2.h y 9.3)</td>
+              </tr>
+              <tr>
+                <td>Datos identificativos y de contacto</td>
+                <td>Comunicación, coordinación y facturación</td>
+                <td>Ejecución de contrato (art. 6.1.b RGPD)</td>
+              </tr>
+              <tr>
+                <td>Datos demográficos y socioeconómicos</td>
+                <td>Cálculo automatizado de una propuesta de precio orientativa <strong>dirigido
+                exclusivamente a valorar la aplicación de reducciones sobre la tarifa de referencia,
+                con la finalidad de garantizar la accesibilidad al tratamiento</strong>, y valoración
+                de becas por dificultad económica</td>
+                <td><strong>Aplicación de medidas precontractuales a petición del interesado</strong>
+                (art. 6.1.b RGPD): la determinación del importe que se ofrece a quien solicita
+                atención es un paso previo necesario a la eventual contratación del servicio</td>
+              </tr>
+              <tr>
+                <td>Formularios en curso y datos de comportamiento (cláusula 2.5)</td>
+                <td>Mejora del diseño de los formularios y de la calidad del servicio; análisis de
+                las barreras de acceso, incluida la barrera económica derivada del arancel</td>
+                <td>El registro <strong>no comprende datos identificativos</strong> y, respecto de
+                los formularios no enviados, tiene <strong>carácter anónimo</strong> (considerando 26
+                del RGPD). Al enviarse el formulario, los datos identificativos se rigen por las
+                bases jurídicas indicadas en las restantes filas de esta tabla</td>
+              </tr>
+              <tr>
+                <td>Datos técnicos y constancias tokenizadas</td>
+                <td>Acreditación de la autoría del acto, del texto legal exhibido y aceptado, y de su
+                fecha</td>
+                <td>Interés legítimo (art. 6.1.f): formulación y defensa de reclamaciones, y
+                seguridad del tratamiento (art. 32)</td>
+              </tr>
+              <tr>
+                <td>Historia clínica</td>
+                <td>Conservación durante el plazo legalmente exigido</td>
+                <td><strong>Obligación legal</strong> (art. 6.1.c RGPD)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Revocación del consentimiento.</strong> En los tratamientos basados en el
+        consentimiento, el Usuario puede revocarlo en cualquier momento y sin necesidad de
+        motivación. La revocación no afecta a la licitud del tratamiento previo. Se exceptúan de la
+        revocación los datos integrantes de la historia clínica cuya conservación viene impuesta por
+        la normativa sanitaria (cláusula 7), que deberán conservarse durante el plazo legalmente
+        establecido con independencia de la revocación y de la finalización de la relación
+        terapéutica.</p>
+
+        <h2>4. Descuentos y becas</h2>
+        <p>La funcionalidad descrita en esta cláusula <strong>no se encuentra actualmente
+        operativa</strong>. Se informa con carácter previo a su implantación.</p>
+
+        <h3>4.1. Finalidad del tratamiento</h3>
+        <p><strong>El servicio tiene una tarifa de referencia única.</strong> Las sesiones tienen un
+        precio establecido con carácter general y previo, idéntico para todos los Usuarios de una
+        zona monetaria similar, que no se determina en función de las características personales de
+        cada Usuario.</p>
+        <p>La <strong>finalidad exclusiva</strong> del cálculo automatizado descrito en esta cláusula
+        es <strong>contemplar la posibilidad de aplicar una reducción sobre dicha tarifa de
+        referencia</strong>, con el objeto de <strong>garantizar la accesibilidad al tratamiento
+        psicológico en aquellas situaciones personales, económicas o geográficas en que el abono de
+        la tarifa de referencia podría resultar desproporcionadamente gravoso o directamente
+        impeditivo del acceso al servicio</strong> —entre otras, y sin carácter limitativo,
+        situaciones de <strong>desempleo, condición de estudiante, precariedad laboral, migración
+        reciente, o residencia en países cuyo nivel de ingresos medios es sustancialmente inferior al
+        de la zona en que se fija la tarifa de referencia</strong>.</p>
+        <p>El tratamiento no tiene por objeto incrementar el precio en función del perfil del
+        Usuario, ni identificar a los Usuarios con mayor capacidad de pago para aplicarles un importe
+        superior al de referencia. El sistema únicamente puede operar a la baja respecto de la tarifa
+        de referencia aplicable.</p>
+
+        <h3>4.2. Descripción del tratamiento</h3>
+        <p>A partir de datos aportados por el Usuario en el formulario de admisión —país y ciudad de
+        residencia, país de origen, antigüedad en el país de residencia, ocupación, situación
+        laboral, nivel educativo, modalidad de atención y franja horaria— el sistema calculará una
+        <strong>propuesta de precio orientativa</strong> y la exhibirá al Usuario, en los términos y
+        con la finalidad de accesibilidad descritos en la cláusula 4.1.</p>
+        <p>El sistema registra asimismo, <strong>sin incidencia alguna sobre el precio</strong>,
+        otras variables: idioma y zona horaria del dispositivo, cobertura sanitaria, edad, existencia
+        de hijos y estado civil. Su registro tiene por objeto evaluar con posterioridad si constituyen
+        indicadores útiles a los efectos de accesibilidad señalados. En caso de que alguna de ellas
+        pase a incidir sobre el precio, la presente política será actualizada y comunicada al Usuario
+        con carácter previo.</p>
+
+        <h3>4.3. Lógica aplicada</h3>
+        <p>El cálculo responde a una fórmula determinista, no a un sistema de aprendizaje
+        automático:</p>
+        <ul>
+          <li>La <strong>zona monetaria</strong> de residencia del Usuario determina la
+          <strong>tarifa de referencia</strong> aplicable. La tarifa de referencia es
+          <strong>única para cada zona monetaria</strong> e idéntica para todos los Usuarios que
+          residen en ella: constituye el precio del servicio.</li>
+          <li>El <strong>país de residencia</strong> determina un <strong>rango de reducción</strong>
+          —una reducción mínima y una reducción máxima— aplicable sobre dicha tarifa. Ambos límites se
+          establecen atendiendo al nivel de ingresos medios del país. En los países de mayor nivel de
+          ingresos la reducción mínima puede ser cero, de modo que la tarifa de referencia resulta
+          efectivamente aplicable; en los demás existe una <strong>reducción estructural</strong> que
+          opera con independencia de cualquier otra circunstancia del Usuario.</li>
+          <li>En caso de residencia en un país distinto al de origen, y <strong>únicamente cuando el
+          país de residencia tenga un nivel de ingresos medios superior al del país de origen</strong>,
+          se aplica un <strong>ajuste por migración reciente</strong> que opera de dos formas, ambas
+          <strong>exclusivamente a favor del Usuario</strong>: (a) <strong>amplía la reducción
+          máxima</strong> aplicable, rebajando el importe mínimo alcanzable; y (b) <strong>reduce la
+          puntuación</strong> a que se refiere el punto siguiente, lo que incrementa la reducción
+          efectivamente aplicada dentro del rango.
+          <br><br>
+          La intensidad del ajuste depende de la <strong>diferencia de nivel de ingresos medios</strong>
+          entre ambos países y <strong>decrece con la antigüedad</strong> en el país de residencia,
+          hasta desaparecer. Responde a que la incorporación efectiva a la economía del país de destino
+          no es inmediata y a que una migración reciente suele implicar ingresos inferiores a los del
+          residente ya establecido.
+          <br><br>
+          La migración hacia un país de nivel de ingresos igual o inferior <strong>no produce efecto
+          alguno</strong>. En ningún caso este ajuste puede incrementar el precio.</li>
+          <li>La ocupación, la situación laboral y el nivel educativo determinan una
+          <strong>puntuación</strong> que sitúa la reducción aplicable dentro del rango descrito.</li>
+          <li>Se aplican ajustes por modalidad de atención y franja horaria, que <strong>únicamente
+          pueden operar como descuento</strong>, y se redondea el resultado <strong>siempre a la
+          baja</strong>.</li>
+        </ul>
+        <p>El precio resultante <strong>no puede en ningún caso superar la tarifa de referencia</strong>
+        de la zona monetaria del Usuario. La estructura del cálculo lo impide <strong>por
+        construcción</strong>: el cálculo parte de la tarifa de referencia y <strong>únicamente
+        resta</strong>.</p>
+        <p>En consecuencia, <strong>el país de residencia sólo puede reducir el precio, nunca
+        aumentarlo</strong>. Ningún Usuario paga más que la tarifa de referencia de su zona monetaria
+        por razón de su residencia o de su nacionalidad.</p>
+
+        <h3>4.4. Variables excluidas</h3>
+        <p>La identidad de género, el estado civil, el motivo de consulta y la gravedad del cuadro
+        clínico <strong>no inciden en ningún caso</strong> sobre el precio. En particular, <strong>el
+        precio no se incrementa ni varía en función de la gravedad, la urgencia o la naturaleza del
+        padecimiento</strong> del Usuario. Tampoco se recaban datos relativos al nivel de ingresos del
+        Usuario o de su unidad familiar, por haberse considerado un dato innecesariamente invasivo
+        para la finalidad perseguida, en aplicación del principio de minimización (art. 5.1.c
+        RGPD).</p>
+
+        <h3>4.5. Intervención humana y derechos del Usuario</h3>
+        <p>El precio exhibido por el sistema tiene <strong>carácter orientativo</strong> y es objeto
+        de <strong>revisión por parte del Responsable</strong> con carácter previo a su determinación
+        definitiva. El Usuario puede, en todo caso, manifestar que el importe propuesto no se ajusta a
+        su situación, <strong>sin necesidad de acreditación documental</strong>, en cuyo caso el
+        Responsable valorará la aplicación de una reducción adicional o de una beca conforme a la
+        cláusula 4.6.</p>
+        <p>Conforme al art. 22 RGPD, el Usuario tiene derecho a obtener <strong>explicación</strong>
+        sobre la lógica aplicada y sobre el resultado obtenido en su caso concreto; a
+        <strong>impugnar</strong> el resultado y obtener su revisión por parte de una persona física;
+        y a expresar su punto de vista y <strong>no ser objeto de una decisión basada únicamente en el
+        tratamiento automatizado</strong> de sus datos.</p>
+
+        <h3>4.6. Becas y reducciones por dificultad económica</h3>
+        <p>Con independencia del cálculo automatizado, y en coherencia con la finalidad de
+        accesibilidad expresada en la cláusula 4.1, el Responsable contempla la concesión de
+        <strong>becas</strong> que cubren parcialmente el importe de un número determinado de sesiones
+        en supuestos de <strong>dificultad económica</strong> —entre otros, desempleo, reducción de
+        ingresos, condición de estudiante o cargas familiares.</p>
+        <p>La beca no modifica la tarifa: opera como <strong>reducción sobre el importe efectivamente
+        abonado</strong> por el Usuario. Su concesión se ofrece pero no se garantiza, se otorga por un
+        número determinado de sesiones y puede volver a solicitarse una vez agotada, sin que la
+        concesión previa genere derecho a una nueva.</p>
+        <p>Para su valoración, el Usuario puede exponer libremente su situación. La información que
+        aporte a tal efecto se trata <strong>exclusivamente</strong> con la finalidad de valorar la
+        concesión de la beca y <strong>no se incorpora a la historia clínica</strong> ni se utiliza
+        con finalidad distinta.</p>
+
+        <h2>5. Destinatarios de los datos</h2>
+        <p>Los datos <strong>no se comunican a terceros</strong> con excepción de los supuestos
+        previstos en esta cláusula. El Responsable está sujeto a <strong>secreto profesional</strong>
+        conforme a la Ley 26.529 y al código deontológico de la profesión (Argentina) y a la Ley
+        41/2002 (España), obligación que subsiste tras la finalización de la relación terapéutica.</p>
+
+        <h3>5.1. Encargados del tratamiento</h3>
+        <p>Los siguientes proveedores tratan datos por cuenta del Responsable, en virtud de los
+        correspondientes contratos de encargo de tratamiento (art. 28 RGPD), y no los utilizan para
+        finalidades propias:</p>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Encargado</th><th>Servicio prestado</th><th>Ubicación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Google</strong> (Workspace, Sheets, Drive, Gmail, Apps Script, Calendar)</td><td>Alojamiento de la base de datos, documentos y correo electrónico</td><td>EE. UU. / UE</td></tr>
+              <tr><td><strong>Vercel</strong></td><td>Alojamiento del sitio web y de los formularios</td><td>EE. UU. / UE</td></tr>
+              <tr><td><strong>Proton AG</strong></td><td>Custodia de una copia de seguridad <strong>cifrada</strong> de la base de datos</td><td>Suiza</td></tr>
+              <tr><td><strong>Google Analytics</strong></td><td>Estadísticas del sitio web público (previo consentimiento)</td><td>EE. UU.</td></tr>
+              <tr><td><strong>Google Fonts</strong></td><td>Tipografías del sitio web (recibe la dirección IP del Usuario)</td><td>EE. UU.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>5.2. Otras comunicaciones</h3>
+        <ul>
+          <li><strong>Autoridades judiciales y administrativas</strong>, cuando exista obligación
+          legal de comunicación.</li>
+          <li><strong>Otros profesionales sanitarios</strong>, exclusivamente previo consentimiento
+          explícito del Usuario o en situación de riesgo vital, en los términos del documento de
+          contrato terapéutico.</li>
+        </ul>
+        <p>Los datos <strong>no son objeto de cesión, venta ni comunicación con fines comerciales o
+        publicitarios</strong>.</p>
+
+        <h2>6. Transferencias internacionales</h2>
+        <p>Los datos pueden ser objeto de transferencia entre <strong>Argentina</strong>,
+        <strong>España / Unión Europea</strong>, <strong>Estados Unidos</strong> y
+        <strong>Suiza</strong>, donde se ubican servidores de los encargados de tratamiento.</p>
+        <ul>
+          <li>La República Argentina ha sido reconocida por la Comisión Europea como país que
+          garantiza un <strong>nivel adecuado de protección</strong> (Decisión 2003/490/CE), por lo
+          que las transferencias desde la Unión Europea a Argentina no requieren garantías
+          adicionales.</li>
+          <li>Las transferencias a <strong>Estados Unidos</strong> se amparan en el Marco de
+          Privacidad de Datos UE-EE. UU. y/o en las Cláusulas Contractuales Tipo aprobadas por la
+          Comisión Europea.</li>
+          <li><strong>Suiza</strong> ha sido igualmente reconocida por la Comisión Europea como
+          país que garantiza un <strong>nivel adecuado de protección</strong>, por lo que las
+          transferencias a dicho país no requieren garantías adicionales.</li>
+        </ul>
+
+        <h2>7. Plazos de conservación</h2>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Categoría de datos</th><th>Plazo de conservación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Historia clínica</strong></td><td>10 años desde la última actuación (Ley 26.529, Argentina). El mínimo exigido en España es de 5 años (Ley 41/2002 y normativa autonómica). Se aplica el plazo más extenso.</td></tr>
+              <tr><td>Formularios de admisión finalizados que no derivan en tratamiento</td><td>2 años</td></tr>
+              <tr><td><strong>Formularios no enviados y datos de comportamiento</strong> (cláusula 2.5)</td><td>No se les aplica plazo de supresión: carecen de datos identificativos y se conservan como estadística</td></tr>
+              <tr><td>Constancias de aceptación de textos legales</td><td>El mismo plazo que la historia clínica, por su función probatoria</td></tr>
+              <tr><td>Datos económicos y de facturación</td><td>10 años, plazo que cubre las obligaciones fiscales aplicables en Argentina y en España</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Transcurridos los plazos indicados, los datos se suprimen o se anonimizan de forma
+        irreversible.</p>
+
+        <h2>8. Derechos del Usuario</h2>
+        <p>El Usuario puede ejercer, de forma gratuita y sin necesidad de motivar la solicitud, los
+        siguientes derechos:</p>
+        <ul>
+          <li><strong>Acceso</strong> a los datos objeto de tratamiento y obtención de copia.</li>
+          <li><strong>Rectificación</strong> de los datos inexactos.</li>
+          <li><strong>Supresión</strong>, con el límite de los datos integrantes de la historia
+          clínica cuya conservación viene legalmente impuesta.</li>
+          <li><strong>Limitación</strong> del tratamiento.</li>
+          <li><strong>Portabilidad</strong> de los datos en formato estructurado y de uso común.</li>
+          <li><strong>Oposición</strong> a los tratamientos fundados en el interés legítimo.</li>
+          <li><strong>Revocación del consentimiento</strong> en cualquier momento.</li>
+          <li><strong>No ser objeto de decisiones individuales automatizadas</strong>, incluido el
+          cálculo de precio, con derecho a obtener intervención humana, a expresar su punto de vista y
+          a impugnar la decisión (cláusula 4.5).</li>
+        </ul>
+        <p><strong>Alcance respecto de los formularios no enviados.</strong> Estos derechos se
+        ejercen sobre datos personales. La información correspondiente a un formulario no enviado
+        (cláusula 2.5) carece de datos identificativos y no puede atribuirse a persona determinada,
+        por lo que no resulta posible identificar los registros de un Usuario concreto ni, en
+        consecuencia, acceder a ellos, rectificarlos o suprimirlos a su solicitud. Esa misma
+        imposibilidad es la que hace innecesario el ejercicio de los derechos: el dato no está
+        referido a él.</p>
+        <p><strong>Ejercicio.</strong> Mediante comunicación dirigida a
+        <a href="mailto:psi.ivanwaisman@gmail.com">psi.ivanwaisman@gmail.com</a>. El Responsable
+        resolverá en el plazo máximo de <strong>un mes</strong> (art. 12.3 RGPD). Podrá requerirse la
+        acreditación de la identidad del solicitante.</p>
+        <p><strong>Reclamación ante la autoridad de control.</strong> Si el Usuario considera que el
+        tratamiento no se ajusta a la normativa, puede presentar reclamación ante la <strong>Agencia
+        Española de Protección de Datos</strong> (AEPD, <a href="https://www.aepd.es" target="_blank"
+        rel="noopener">aepd.es</a>) en España y la Unión Europea, o ante la <strong>Agencia de Acceso
+        a la Información Pública</strong> (AAIP,
+        <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener">argentina.gob.ar/aaip</a>)
+        en Argentina.</p>
+        <p>El ejercicio de cualquiera de estos derechos <strong>no produce efecto alguno sobre la
+        prestación del servicio terapéutico</strong>.</p>
+
+        <h2>9. Medidas de seguridad</h2>
+        <ul>
+          <li>Acceso al panel de administración protegido mediante clave almacenada en forma de
+          <strong>resumen criptográfico (SHA-256)</strong>, no en texto plano.</li>
+          <li>Acceso al portal del paciente mediante <strong>tokens firmados criptográficamente
+          (HMAC-SHA256)</strong> con vigencia limitada a 90 días. La base de datos almacena la
+          <strong>huella del token, no el token</strong>, de modo que este no resulta reconstruible
+          desde el registro.</li>
+          <li>Alojamiento en infraestructura con cifrado en tránsito y en reposo.</li>
+          <li><strong>Registro de auditoría</strong> de toda modificación realizada sobre los
+          registros, con fecha y contenido precedente.</li>
+          <li>Almacenamiento del resumen criptográfico de los textos legales aceptados, a efectos de
+          acreditar la versión exhibida.</li>
+        </ul>
+        <p><strong>Seguridad de la cuenta de alojamiento.</strong> Los datos se alojan en servicios de
+        Google (Workspace, Sheets, Drive y Gmail), que actúan como encargados del tratamiento conforme
+        a la cláusula 5. El acceso a dicha cuenta está protegido mediante <strong>verificación en dos
+        pasos</strong>, de modo que el conocimiento de la contraseña no basta por sí solo para acceder
+        a los datos. Las credenciales de acceso son de <strong>alta complejidad</strong> y se custodian,
+        a su vez, bajo un sistema protegido con doble factor de autenticación.</p>
+        <p>Sin perjuicio de lo anterior, ningún sistema de información es absolutamente invulnerable.
+        En caso de violación de la seguridad que entrañe riesgo para los derechos y libertades del
+        Usuario, el Responsable <strong>notificará a la autoridad de control en el plazo de 72
+        horas</strong> y comunicará el hecho a los afectados cuando el riesgo sea alto, conforme a los
+        arts. 33 y 34 RGPD.</p>
+
+        <h2>10. Menores de edad</h2>
+        <p>El servicio se dirige <strong>exclusivamente a personas mayores de edad</strong>. El
+        Responsable no presta atención psicológica a menores de 18 años.</p>
+        <p>El formulario de admisión no debe ser cumplimentado por menores de edad. Si el Responsable
+        advirtiera que los datos aportados corresponden a una persona menor de edad, procederá a su
+        supresión y, en su caso, a orientar a la persona hacia recursos asistenciales adecuados a su
+        edad.</p>
+
+        <h2>11. Modificación de la presente política</h2>
+        <p>El Responsable podrá modificar esta política. Toda modificación sustancial —en particular
+        la puesta en funcionamiento del cálculo automatizado dirigido a la aplicación de reducciones
+        sobre la tarifa de referencia (cláusula 4), o la incorporación al mismo de variables que
+        actualmente solo se registran— dará lugar a la <strong>elevación de la versión del
+        documento</strong> y a su <strong>comunicación al Usuario</strong> con carácter previo a que
+        le resulte de aplicación. El sistema conserva constancia de la versión aceptada por cada
+        Usuario.</p>
+        <p>Se hace constar expresamente que <strong>cualquier modificación que permitiera al cálculo
+        automatizado determinar un precio superior a la tarifa de referencia, o incrementarlo en
+        función del perfil del Usuario, alteraría la finalidad declarada en la cláusula 4.1</strong> y
+        requeriría, además de la actualización de esta política, la obtención de un nuevo
+        consentimiento.</p>
+
+        <h2>12. Contacto</h2>
+        <p>Para cualquier consulta relativa al tratamiento de datos personales:
+        <a href="mailto:psi.ivanwaisman@gmail.com">psi.ivanwaisman@gmail.com</a></p>
+
+        <footer>
+          Iván Waisman, MSc. Todos los derechos reservados.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

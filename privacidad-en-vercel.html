@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" href="https://psi.ivanwaisman.com/favicon.png" type="image/png" />
+    <title>Personal Data Processing Policy · Iván Waisman</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+      :root {
+        --bg: #efe3d2;
+        --card: rgba(255, 252, 248, 0.96);
+        --text: #251d17;
+        --muted: #695a4d;
+        --accent: #b88656;
+        --accent-soft: rgba(184, 134, 86, 0.12);
+        --border: rgba(110, 83, 59, 0.16);
+        --border-strong: rgba(110, 83, 59, 0.24);
+        --shadow: 0 30px 70px rgba(83, 56, 34, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Manrope', sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.94), transparent 18%),
+          linear-gradient(180deg, #f6fbff 0%, #e8f3ff 46%, #fbf5ec 100%);
+        background-attachment: fixed;
+        line-height: 1.68;
+      }
+
+      .shell {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 80px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 28px;
+        font-size: 12.5px;
+      }
+
+      .topbar a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.22s ease, color 0.22s ease;
+      }
+
+      .topbar a:hover { color: var(--text); border-color: var(--border-strong); }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        padding: clamp(24px, 5vw, 52px);
+      }
+
+      h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(28px, 5vw, 40px);
+        font-weight: 600;
+        margin: 0 0 6px;
+        letter-spacing: 0.01em;
+      }
+
+      .doc-meta {
+        color: var(--muted);
+        font-size: 12.5px;
+        margin: 0 0 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(21px, 3.4vw, 26px);
+        font-weight: 600;
+        margin: 40px 0 12px;
+        padding-top: 6px;
+      }
+
+      h3 {
+        font-size: 14.5px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+        color: var(--text);
+      }
+
+      p, li { font-size: 14.5px; color: var(--text); margin: 0 0 12px; }
+
+      ul { padding-left: 20px; margin: 0 0 14px; }
+      li { margin-bottom: 7px; }
+
+      strong { font-weight: 700; }
+
+      a { color: var(--accent); }
+
+      .resumen {
+        background: var(--accent-soft);
+        border: 1px solid rgba(184, 134, 86, 0.28);
+        border-radius: 16px;
+        padding: 22px 24px;
+        margin: 0 0 8px;
+      }
+
+      .resumen h2 { margin-top: 0; }
+
+      .tabla-wrap { overflow-x: auto; margin: 0 0 18px; }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 460px;
+        font-size: 13px;
+      }
+
+      th, td {
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      th {
+        font-weight: 700;
+        color: var(--muted);
+        font-size: 11.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <a href="/en">← Back to home</a>
+        <a href="/privacidad">Español</a>
+      </div>
+
+      <main class="card">
+        <h1>Personal Data Processing Policy</h1>
+        <p class="doc-meta">Version v1 · Last updated: July 2026</p>
+
+        <p>This platform <strong>is not an emergency or crisis service</strong>, and <strong>does not
+        replace medical or psychiatric emergency services</strong>. Requests received through the
+        forms are reviewed on a deferred basis; there is no immediate attention.</p>
+        <p>If the User is in a situation of immediate risk to their life or physical integrity, or to
+        those of another person, they <strong>must contact their local emergency services as a
+        matter of priority</strong>. In Argentina, 911 and, for suicidal behaviour, 135 from the City
+        of Buenos Aires and Greater Buenos Aires, or (011) 5275-1135 from the rest of the country
+        (Centro de Asistencia al Suicida). In Spain, 112 and 024 (Suicidal Behaviour Helpline). In
+        any other country, the emergency number for their place of residence.</p>
+
+        <section class="resumen">
+          <h2>Key information on data protection</h2>
+          <div class="tabla-wrap">
+            <table>
+              <tbody>
+                <tr><th>Controller</th><td>Iván Waisman, psychologist</td></tr>
+                <tr><th>Purpose</th><td>Provision of psychological care and consultancy services</td></tr>
+                <tr><th>Legal basis</th><td>Consent of the data subject, performance of a contract and of pre-contractual measures at the data subject's request, compliance with legal obligations, and legitimate interest</td></tr>
+                <tr><th>Recipients</th><td>Data is not disclosed to third parties, except where legally required. Technology providers act as processors (clause 5)</td></tr>
+                <tr><th>Rights</th><td>Access, rectification, erasure, restriction, portability, objection and withdrawal of consent, as well as the right to lodge a complaint with a supervisory authority (clause 8)</td></tr>
+                <tr><th>Further information</th><td>The full policy is set out below</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <p style="margin-top:20px;">Acceptance of this policy is a <strong>necessary condition</strong>
+        for completing the intake form. Users who do not agree to it may contact the Controller by
+        email without using the system.</p>
+
+        <h2>1. Data controller</h2>
+        <!-- IDENTIFICACION:INICIO — GENERADO por build-privacidad.js desde las credenciales del
+             dashboard. No editar a mano: el próximo `npm run publish` lo pisa. -->
+        <div class="tabla-wrap">
+          <table>
+            <tbody>
+              <tr><th>Controller</th><td>Iván Waisman, psychologist</td></tr>
+              <tr><th>Tax identification</th><td>CUIT 20-41680229-8 (Argentina) · NIE Z4550872-M (Spain)</td></tr>
+              <tr><th>Professional address (Argentina)</th><td>Ángel Gallardo 652, San Carlos de Bariloche, Río Negro, Argentina</td></tr>
+              <tr><th>Professional address (European Union)</th><td>Carrer de Floridablanca 68, 08015 Barcelona, Spain</td></tr>
+              <tr><th>Professional registration</th><td>Col·legi Oficial de Psicologia de Catalunya, registration no. 36779 · Colegio de Psicólogos de la Zona Andina, registration no. 2876</td></tr>
+              <tr><th>Contact email</th><td><a href="mailto:psi.ivanwaisman@gmail.com">psi.ivanwaisman@gmail.com</a></td></tr>
+              <tr><th>Website</th><td>psi.ivanwaisman.com</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- IDENTIFICACION:FIN -->
+        <p>The Controller practises as an individual professional. The processing of the data and all
+        decisions relating to it are his exclusive responsibility. No other users have access to the
+        system, without prejudice to the processors listed in clause 5.</p>
+
+        <h2>2. Data processed</h2>
+        <p>The system collects the following categories of User data.</p>
+
+        <h3>2.1. Identification and contact data</h3>
+        <p>Name, surname, email address, telephone number, identity document, address, and the details
+        of the person designated as emergency contact (name, relationship and telephone number).</p>
+
+        <h3>2.2. Special categories of data</h3>
+        <p>The following data constitute <strong>special categories of personal data</strong> under
+        art. 9 GDPR and <strong>sensitive data</strong> under arts. 2 and 7 of Law 25.326 (Argentina),
+        and are subject to reinforced protection:</p>
+        <ul>
+          <li><strong>Health data:</strong> reason for consultation and its detail, previous
+          treatments, therapeutic goals, expectations regarding treatment, other professionals
+          involved, medication and substances (name, dose, frequency, prescribing professional and
+          reason), health coverage, preferred hospital, responses to the therapeutic preferences
+          questionnaire, and responses to the assessment questionnaires, of two kinds: a
+          <strong>post-session questionnaire</strong>, on the course and usefulness of that session;
+          and a <strong>progress and discharge questionnaire</strong>, roughly monthly, on overall
+          feedback about the process, perceived progress and the fit of the treatment.</li>
+          <li><strong>Gender identity data.</strong> Collected for the purpose of addressing the
+          person in accordance with their identity from the first contact and of properly
+          contextualising their care. It has <strong>no bearing whatsoever on the fee</strong>
+          (clause 4.4) and is not used for commercial, advertising or segmentation purposes.</li>
+          <li>The socio-economic data listed in clause 2.3, to the extent that they reveal the User's
+          personal circumstances.</li>
+        </ul>
+
+        <h3>2.3. Demographic and socio-economic data</h3>
+        <p>Date of birth, marital status, whether the User has children and their ages, country and
+        city of residence, country and city of origin, occupation, employment status, level of
+        education, declared ability to afford a private fee, and declared economic circumstances.</p>
+        <p>These data serve a <strong>dual purpose</strong>, which is expressly stated for the
+        purposes of art. 13.1.c GDPR:</p>
+        <ul>
+          <li>They constitute <strong>clinically relevant information</strong> for assessment and
+          treatment.</li>
+          <li>They feed the <strong>automated calculation described in clause 4</strong>, whose sole
+          purpose is to assess whether a <strong>reduction on the reference rate</strong> should be
+          applied, in order to <strong>safeguard access to treatment</strong> in circumstances that
+          might otherwise hinder it — unemployment, student status, precarious employment, recent
+          migration, or residence in countries with lower average incomes, among others. These data
+          are <strong>never used to increase the fee</strong> above the reference rate.</li>
+        </ul>
+
+        <h3>2.4. Technical data</h3>
+        <p>On each access to the forms and to the patient portal, the system records: IP address and
+        the approximate location derived from it (country, region and city); browser and device;
+        language and time zone configured on the device; and device and session identifiers.</p>
+        <p><strong>Evidential and authentication purpose.</strong> When the User accesses the portal,
+        accepts the informed consent form or confirms any other legal text, the system leaves a
+        <strong>tokenised record</strong> of that act: it associates the access with a cryptographic
+        fingerprint of the token — which uniquely identifies the session without allowing it to be
+        reused — together with the IP address, the device, the date, and the <strong>cryptographic
+        fingerprint (SHA-256 hash) of the exact text displayed</strong>.</p>
+        <p>The purpose of this record is to make it possible to demonstrate, in the event of a dispute
+        and before a third party (professional body, supervisory authority or court): that the act was
+        performed by the User to whom the data belongs <strong>and not by another person</strong>;
+        which exact version of the document was displayed to them and accepted, and on what date; and
+        that the text has not been altered after acceptance. This record protects the User and the
+        Controller equally.</p>
+
+        <h3>2.5. Forms in progress and behavioural data</h3>
+        <p>While the forms are being completed, the system records the answers entered up to each
+        point, together with the following usage data:</p>
+        <ul>
+          <li>Time spent on each step and number of visits to each step.</li>
+          <li>Time spent on each field and number of edits or corrections to it.</li>
+          <li>Time elapsed until the User's first interaction with the form.</li>
+          <li>Effective time in use, as distinct from total session time.</li>
+          <li>Scroll percentage over the informed consent text and whether it was read to the end.</li>
+          <li><strong>The step and field at which completion is interrupted</strong>, where
+          applicable, and the moment of interruption.</li>
+        </ul>
+        <p><strong>Absence of identifying data.</strong> This record <strong>contains no identifying
+        data</strong>. The name, surname, email address, telephone number, identity document and date
+        of birth are neither transmitted nor stored. Of the age, only the number of years is retained.
+        Identifying data are transmitted <strong>upon submission of the form</strong>, and not
+        before.</p>
+        <p>The information relating to a <strong>form that has not been submitted</strong> is not
+        associated with any identifying data, nor with any record that would make it attributable to a
+        specific person. It is therefore <strong>anonymous</strong> (Recital 26 GDPR), and is retained
+        solely as statistics.</p>
+        <p>Upon submission of the form, the identifying data are incorporated into the processing and
+        are governed by clauses 2.1 to 2.3 and by the legal bases set out in clause 3.</p>
+        <p><strong>Purpose.</strong> These data are processed for the purpose of <strong>assessing and
+        improving the design of the forms and the quality of the service provided</strong>, and of
+        <strong>identifying barriers to access</strong>. In particular, recording the step and field at
+        which Users interrupt completion makes it possible to determine:</p>
+        <ul>
+          <li>whether a question is confusing, excessive or poorly worded, and should be amended or
+          removed;</li>
+          <li>whether the length of the form is itself an obstacle;</li>
+          <li>whether the fee communicated operates as an <strong>economic barrier to access</strong>,
+          in what proportion of cases and for which profiles. Consistent with the accessibility purpose
+          set out in clause 4.1, this information is used to review the reference rate, the applicable
+          reduction limits and the scope of the bursary scheme, so that price does not prevent access
+          to treatment for those who need it.</li>
+        </ul>
+        <p>This analysis is carried out in <strong>aggregate</strong> form, aimed at detecting patterns
+        in the instrument and in the service, not in individual persons.</p>
+        <p><strong>Exclusion from clinical use.</strong> Behavioural data are <strong>not incorporated
+        into the clinical record, nor used as material for the clinical assessment of the User</strong>,
+        nor cross-referenced with their health data for interpretative purposes.</p>
+        <p><strong>Resuming completion.</strong> A User who interrupts a form may resume it from the
+        same device: what has been entered is kept in the User's own browser, on their own equipment,
+        and does not depend on the record described in this clause.</p>
+
+        <h3>2.6. Patient portal usage data</h3>
+        <p>For Users who access the portal, the system records usage events, the duration of visits, the
+        fee displayed, bookings and payments reported, receipts provided and questionnaires completed,
+        together with the technical data described in clause 2.4.</p>
+        <p>Access to the portal takes place by means of an <strong>individual cryptographically signed
+        token</strong> sent to the User's email address. The record of each access is associated with the
+        fingerprint of that token, for the dual purpose of demonstrating that the actions carried out in
+        the portal — bookings, payment notifications, submission of documents and completion of
+        questionnaires — <strong>were carried out by the User and not by a third party</strong>, and of
+        making it possible to detect unauthorised access.</p>
+
+        <h3>2.7. Public website and cookies</h3>
+        <p>The public website uses <strong>Google Analytics</strong> for statistical purposes, which
+        involves third-party cookies. Such cookies <strong>are only installed if the User gives
+        consent</strong>, by means of the notice displayed on the first visit. Users may refuse them
+        without this affecting the operation of the site, and may reverse their decision at any time by
+        clearing their browser cookies.</p>
+        <p>The intake form, the assessment forms and the patient portal <strong>do not incorporate
+        analytics tools or advertising tracking technologies</strong> of any kind.</p>
+
+        <h2>3. Legal bases for processing</h2>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Processing</th><th>Purpose</th><th>Legal basis</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Health data, gender identity and clinical content</td>
+                <td>Assessment, treatment and maintenance of the clinical record</td>
+                <td><strong>Explicit consent</strong> (art. 9.2.a GDPR) and <strong>art. 7 of Law
+                25.326</strong> (Argentina), obtained by means of a specific, separate tick box in the
+                form. In the alternative, healthcare provided by a professional subject to
+                confidentiality (arts. 9.2.h and 9.3)</td>
+              </tr>
+              <tr>
+                <td>Identification and contact data</td>
+                <td>Communication, scheduling and invoicing</td>
+                <td>Performance of a contract (art. 6.1.b GDPR)</td>
+              </tr>
+              <tr>
+                <td>Demographic and socio-economic data</td>
+                <td>Automated calculation of an indicative fee proposal, <strong>directed exclusively at
+                assessing the application of reductions on the reference rate, with the purpose of
+                safeguarding access to treatment</strong> (unemployment, student status, precarious
+                employment, recent migration, countries with lower average incomes), and assessment of
+                bursaries on grounds of financial hardship</td>
+                <td><strong>Pre-contractual measures at the data subject's request</strong> (art. 6.1.b
+                GDPR): determining the fee offered to a person requesting care is a necessary step prior
+                to the possible conclusion of the service contract</td>
+              </tr>
+              <tr>
+                <td>Forms in progress and behavioural data (clause 2.5)</td>
+                <td>Improvement of the design of the forms and of the quality of the service; analysis of
+                barriers to access, including the economic barrier arising from the fee</td>
+                <td>The record <strong>contains no identifying data</strong> and, as regards forms that
+                have not been submitted, is <strong>anonymous</strong> (Recital 26 GDPR). Upon submission
+                of the form, the identifying data are governed by the legal bases set out in the other
+                rows of this table</td>
+              </tr>
+              <tr>
+                <td>Technical data and tokenised records</td>
+                <td>Demonstrating the authorship of the act, the legal text displayed and accepted, and
+                its date</td>
+                <td>Legitimate interest (art. 6.1.f): establishment and defence of legal claims, and
+                security of processing (art. 32)</td>
+              </tr>
+              <tr>
+                <td>Clinical record</td>
+                <td>Retention for the period required by law</td>
+                <td><strong>Legal obligation</strong> (art. 6.1.c GDPR)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Withdrawal of consent.</strong> Where processing is based on consent, the User may
+        withdraw it at any time and without giving reasons. Withdrawal does not affect the lawfulness of
+        prior processing. Data forming part of the clinical record whose retention is required by health
+        legislation (clause 7) are excepted from withdrawal, and must be retained for the legally
+        prescribed period regardless of withdrawal and of the end of the therapeutic relationship.</p>
+
+        <h2>4. Discounts and bursaries</h2>
+        <p>The functionality described in this clause <strong>is not currently in operation</strong>.
+        Information is provided in advance of its implementation.</p>
+
+        <h3>4.1. Purpose of the processing</h3>
+        <p><strong>The service has a single reference rate.</strong> Sessions have a price set in
+        advance and on a general basis, identical for all Users within a comparable monetary zone, which
+        is not determined by reference to the personal characteristics of each User.</p>
+        <p>The <strong>sole purpose</strong> of the automated calculation described in this clause is to
+        <strong>consider whether a reduction on that reference rate should be applied</strong>, in order
+        to <strong>safeguard access to psychological treatment in those personal, economic or
+        geographical circumstances in which paying the reference rate could be disproportionately
+        burdensome or directly prevent access to the service</strong> — including, without limitation,
+        <strong>unemployment, student status, precarious employment, recent migration, or residence in
+        countries whose average income level is substantially lower than that of the zone in which the
+        reference rate is set</strong>.</p>
+        <p>The processing is not intended to increase the fee on the basis of the User's profile, nor to
+        identify Users with a greater ability to pay in order to charge them more than the reference
+        rate. The system can only operate downwards from the applicable reference rate.</p>
+
+        <h3>4.2. Description of the processing</h3>
+        <p>On the basis of data provided by the User in the intake form — country and city of residence,
+        country of origin, length of residence in the country, occupation, employment status, level of
+        education, mode of care and time slot — the system will calculate an <strong>indicative fee
+        proposal</strong> and display it to the User, on the terms and for the accessibility purpose set
+        out in clause 4.1.</p>
+        <p>The system also records, <strong>with no bearing whatsoever on the fee</strong>, other
+        variables: device language and time zone, health coverage, age, whether the User has children,
+        and marital status. They are recorded in order to assess subsequently whether they constitute
+        useful indicators for the accessibility purposes indicated. Should any of them come to affect the
+        fee, this policy will be updated and communicated to the User in advance.</p>
+
+        <h3>4.3. Logic applied</h3>
+        <p>The calculation follows a deterministic formula, not a machine-learning system:</p>
+        <ul>
+          <li>The User's <strong>monetary zone</strong> of residence determines the applicable
+          <strong>reference rate</strong>. The reference rate is <strong>a single rate for each
+          monetary zone</strong> and is identical for all Users residing within it: it is the price of
+          the service.</li>
+          <li>The <strong>country of residence</strong> determines a <strong>reduction range</strong>
+          —a minimum reduction and a maximum reduction— applicable to that rate. Both limits are set by
+          reference to the average income level of the country. In higher-income countries the minimum
+          reduction may be zero, so that the reference rate is effectively applicable; in the others
+          there is a <strong>structural reduction</strong> that applies irrespective of any other
+          circumstance of the User.</li>
+          <li>Where the User resides in a country other than their country of origin, and
+          <strong>only where the country of residence has a higher average income level than the
+          country of origin</strong>, a <strong>recent-migration adjustment</strong> applies, operating
+          in two ways, both <strong>exclusively in the User's favour</strong>: (a) it <strong>widens the
+          maximum reduction</strong>, lowering the minimum attainable fee; and (b) it <strong>lowers the
+          score</strong> referred to in the following point, which increases the reduction actually
+          applied within the range.
+          <br><br>
+          The strength of the adjustment depends on the <strong>difference in average income level</strong>
+          between the two countries and <strong>decreases with length of residence</strong>, until it
+          disappears. It reflects the fact that effective integration into the economy of the destination
+          country is not immediate, and that recent migration usually entails lower income than that of an
+          already established resident.
+          <br><br>
+          Migration to a country of equal or lower income level <strong>has no effect whatsoever</strong>.
+          This adjustment can in no case increase the fee.</li>
+          <li>Occupation, employment status and level of education produce a <strong>score</strong> that
+          places the applicable reduction within the range described above.</li>
+          <li>Adjustments are applied for mode of care and time slot, which <strong>can only operate as
+          a discount</strong>, and the result is <strong>always rounded down</strong>.</li>
+        </ul>
+        <p>The resulting fee <strong>can in no case exceed the reference rate</strong> of the User's
+        monetary zone. The structure of the calculation makes this impossible <strong>by
+        design</strong>: the calculation starts from the reference rate and <strong>only
+        subtracts</strong>.</p>
+        <p>Consequently, <strong>the country of residence can only reduce the fee, never increase
+        it</strong>. No User pays more than the reference rate of their monetary zone by reason of
+        their residence or nationality.</p>
+
+        <h3>4.4. Excluded variables</h3>
+        <p>Gender identity, marital status, the reason for consultation and the severity of the clinical
+        presentation <strong>have no bearing whatsoever</strong> on the fee. In particular, <strong>the fee
+        is neither increased nor varied according to the severity, urgency or nature of the User's
+        condition</strong>. Nor is data collected on the income of the User or their household, this having
+        been considered unnecessarily intrusive for the purpose pursued, in application of the principle
+        of data minimisation (art. 5.1.c GDPR).</p>
+
+        <h3>4.5. Human intervention and the User's rights</h3>
+        <p>The fee displayed by the system is <strong>indicative</strong> and is <strong>reviewed by the
+        Controller</strong> before being finally determined. The User may in any event state that the
+        proposed amount does not match their circumstances, <strong>without any need for documentary
+        evidence</strong>, in which case the Controller will consider applying a further reduction or a
+        bursary in accordance with clause 4.6.</p>
+        <p>Under art. 22 GDPR, the User has the right to obtain an <strong>explanation</strong> of the
+        logic applied and of the result obtained in their particular case; to <strong>contest</strong> the
+        result and obtain its review by a natural person; and to express their point of view and
+        <strong>not to be subject to a decision based solely on automated processing</strong> of their
+        data.</p>
+
+        <h3>4.6. Bursaries and reductions on grounds of financial hardship</h3>
+        <p>Independently of the automated calculation, and consistent with the accessibility purpose set
+        out in clause 4.1, the Controller offers <strong>bursaries</strong> which cover part of the cost of
+        a given number of sessions in cases of <strong>financial hardship</strong> — including
+        unemployment, reduced income, student status or family responsibilities.</p>
+        <p>A bursary does not alter the rate: it operates as a <strong>reduction on the amount actually
+        paid</strong> by the User. It is offered but not guaranteed, is granted for a set number of
+        sessions, and may be applied for again once exhausted, without a previous grant creating any
+        entitlement to a further one.</p>
+        <p>In order for a bursary to be assessed, the User may describe their circumstances freely. Any
+        information provided for that purpose is processed <strong>exclusively</strong> for the purpose of
+        assessing the bursary and is <strong>not incorporated into the clinical record</strong>, nor used
+        for any other purpose.</p>
+
+        <h2>5. Recipients of the data</h2>
+        <p>Data <strong>are not disclosed to third parties</strong>, except in the cases set out in this
+        clause. The Controller is bound by <strong>professional confidentiality</strong> under Law 26.529
+        and the professional code of ethics (Argentina) and under Law 41/2002 (Spain), an obligation which
+        subsists after the end of the therapeutic relationship.</p>
+
+        <h3>5.1. Processors</h3>
+        <p>The following providers process data on the Controller's behalf, under the corresponding data
+        processing agreements (art. 28 GDPR), and do not use it for their own purposes:</p>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Processor</th><th>Service provided</th><th>Location</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Google</strong> (Workspace, Sheets, Drive, Gmail, Apps Script, Calendar)</td><td>Hosting of the database, documents and email</td><td>USA / EU</td></tr>
+              <tr><td><strong>Vercel</strong></td><td>Hosting of the website and the forms</td><td>USA / EU</td></tr>
+              <tr><td><strong>Proton AG</strong></td><td>Custody of an <strong>encrypted</strong> backup copy of the database</td><td>Switzerland</td></tr>
+              <tr><td><strong>Google Analytics</strong></td><td>Statistics for the public website (subject to prior consent)</td><td>USA</td></tr>
+              <tr><td><strong>Google Fonts</strong></td><td>Website typefaces (receives the User's IP address)</td><td>USA</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>5.2. Other disclosures</h3>
+        <ul>
+          <li><strong>Judicial and administrative authorities</strong>, where there is a legal obligation
+          to disclose.</li>
+          <li><strong>Other healthcare professionals</strong>, exclusively with the User's prior explicit
+          consent or in a situation of risk to life, on the terms of the informed consent document.</li>
+        </ul>
+        <p>Data <strong>are not sold, transferred or disclosed for commercial or advertising
+        purposes</strong>.</p>
+
+        <h2>6. International transfers</h2>
+        <p>Data may be transferred between <strong>Argentina</strong>, <strong>Spain / the European
+        Union</strong>, the <strong>United States</strong> and <strong>Switzerland</strong>, where the
+        processors' servers are located.</p>
+        <ul>
+          <li>The Argentine Republic has been recognised by the European Commission as providing an
+          <strong>adequate level of protection</strong> (Decision 2003/490/EC), so transfers from the
+          European Union to Argentina do not require additional safeguards.</li>
+          <li>Transfers to the <strong>United States</strong> are covered by the EU-US Data Privacy
+          Framework and/or by the Standard Contractual Clauses approved by the European Commission.</li>
+          <li><strong>Switzerland</strong> has likewise been recognised by the European Commission as
+          providing an <strong>adequate level of protection</strong>, so transfers to that country do
+          not require additional safeguards.</li>
+        </ul>
+
+        <h2>7. Retention periods</h2>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Category of data</th><th>Retention period</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Clinical record</strong></td><td>10 years from the last intervention (Law 26.529, Argentina). The minimum required in Spain is 5 years (Law 41/2002 and regional legislation). The longer period applies.</td></tr>
+              <tr><td>Completed intake forms not leading to treatment</td><td>2 years</td></tr>
+              <tr><td><strong>Forms not submitted and behavioural data</strong> (clause 2.5)</td><td>No erasure period applies: they contain no identifying data and are retained as statistics</td></tr>
+              <tr><td>Records of acceptance of legal texts</td><td>The same period as the clinical record, given their evidential function</td></tr>
+              <tr><td>Financial and invoicing data</td><td>10 years, a period covering the applicable tax obligations in Argentina and in Spain</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Once these periods have elapsed, the data are deleted or irreversibly anonymised.</p>
+
+        <h2>8. The User's rights</h2>
+        <p>The User may exercise the following rights, free of charge and without having to give reasons:</p>
+        <ul>
+          <li><strong>Access</strong> to the data processed and to obtain a copy.</li>
+          <li><strong>Rectification</strong> of inaccurate data.</li>
+          <li><strong>Erasure</strong>, subject to the limits applying to data forming part of the clinical
+          record whose retention is required by law.</li>
+          <li><strong>Restriction</strong> of processing.</li>
+          <li><strong>Portability</strong> of the data in a structured, commonly used format.</li>
+          <li><strong>Objection</strong> to processing based on legitimate interest.</li>
+          <li><strong>Withdrawal of consent</strong> at any time.</li>
+          <li><strong>Not to be subject to automated individual decision-making</strong>, including the fee
+          calculation, with the right to obtain human intervention, to express their point of view and to
+          contest the decision (clause 4.5).</li>
+        </ul>
+        <p><strong>Scope as regards forms not submitted.</strong> These rights are exercised over
+        personal data. The information relating to a form that has not been submitted (clause 2.5)
+        contains no identifying data and cannot be attributed to a specific person, so it is not
+        possible to identify the records of a particular User nor, consequently, to access, rectify or
+        erase them at their request. That same impossibility is what makes the exercise of these rights
+        unnecessary: the data does not refer to them.</p>
+        <p><strong>How to exercise them.</strong> By writing to
+        <a href="mailto:psi.ivanwaisman@gmail.com">psi.ivanwaisman@gmail.com</a>. The Controller will
+        respond within a maximum of <strong>one month</strong> (art. 12.3 GDPR). Proof of the applicant's
+        identity may be required.</p>
+        <p><strong>Complaint to a supervisory authority.</strong> If the User considers that the processing
+        does not comply with the applicable rules, they may lodge a complaint with the <strong>Spanish Data
+        Protection Agency</strong> (AEPD, <a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>)
+        in Spain and the European Union, or with the <strong>Agency for Access to Public Information</strong>
+        (AAIP, <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener">argentina.gob.ar/aaip</a>)
+        in Argentina.</p>
+        <p>Exercising any of these rights <strong>has no effect whatsoever on the provision of the
+        therapeutic service</strong>.</p>
+
+        <h2>9. Security measures</h2>
+        <ul>
+          <li>Access to the administration panel is protected by a password stored as a
+          <strong>cryptographic digest (SHA-256)</strong>, not in plain text.</li>
+          <li>Access to the patient portal uses <strong>cryptographically signed tokens
+          (HMAC-SHA256)</strong> valid for 90 days. The database stores the <strong>fingerprint of the
+          token, not the token</strong>, so that it cannot be reconstructed from the record.</li>
+          <li>Hosting on infrastructure with encryption in transit and at rest.</li>
+          <li><strong>Audit log</strong> of every modification made to the records, with date and previous
+          content.</li>
+          <li>Storage of the cryptographic digest of the legal texts accepted, in order to demonstrate the
+          version displayed.</li>
+        </ul>
+        <p><strong>Security of the hosting account.</strong> The data is hosted on Google services
+        (Workspace, Sheets, Drive and Gmail), which act as processors in accordance with clause 5. Access
+        to that account is protected by <strong>two-step verification</strong>, so that knowledge of the
+        password alone is not sufficient to access the data. The access credentials are of <strong>high
+        complexity</strong> and are themselves kept under a system protected by two-factor
+        authentication.</p>
+        <p>Notwithstanding the above, no information system is entirely invulnerable. In the event of a
+        security breach entailing a risk to the User's rights and freedoms, the Controller <strong>will
+        notify the supervisory authority within 72 hours</strong> and will communicate the breach to those
+        affected where the risk is high, in accordance with arts. 33 and 34 GDPR.</p>
+
+        <h2>10. Minors</h2>
+        <p>The service is aimed <strong>exclusively at adults</strong>. The Controller does not provide
+        psychological care to persons under 18 years of age.</p>
+        <p>The intake form must not be completed by minors. Should the Controller become aware that the data
+        provided relate to a minor, it will be deleted and, where appropriate, the person will be directed
+        towards care resources appropriate to their age.</p>
+
+        <h2>11. Changes to this policy</h2>
+        <p>The Controller may amend this policy. Any substantial amendment — in particular the bringing into
+        operation of the automated calculation aimed at applying reductions on the reference rate (clause 4),
+        or the inclusion in it of variables that are currently only recorded — will result in the
+        <strong>version of the document being raised</strong> and in it being <strong>communicated to the
+        User</strong> before it applies to them. The system keeps a record of the version accepted by each
+        User.</p>
+        <p>It is expressly stated that <strong>any amendment allowing the automated calculation to determine
+        a fee higher than the reference rate, or to increase it on the basis of the User's profile, would
+        alter the purpose declared in clause 4.1</strong> and would require, in addition to the updating of
+        this policy, fresh consent to be obtained.</p>
+
+        <h2>12. Contact</h2>
+        <p>For any query concerning the processing of personal data:
+        <a href="mailto:psi.ivanwaisman@gmail.com">psi.ivanwaisman@gmail.com</a></p>
+
+        <footer>
+          Iván Waisman, MSc. All rights reserved.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
