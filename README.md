@@ -1,25 +1,43 @@
 # psi.ivanwaisman.com — public pages
 
-This repo holds only the public pages of the site, as they are live today. The rest of the
-system (backend, patient portal, admin panel) is not included and is not needed for Ads work.
+This repo holds the public pages of the site. It deploys to its own Vercel project, and
+psi.ivanwaisman.com forwards to it every address that the main (private) project doesn't serve.
+**Once the setup is finished, a push to `main` goes live on psi.ivanwaisman.com within a minute or two.**
 
 | URL | File |
 |-----|------|
-| `/` | `index.html` |
+| `/`, `/es` | `index.html` |
 | `/en` | `index-en.html` |
-| `/intake` (new patient form — main conversion) | `intake-vercel.html` |
-| `/privacidad`, `/privacy` | `privacidad-vercel.html`, `privacidad-en-vercel.html` |
+| `/robots.txt`, `/sitemap.xml` | same names |
+| any address that doesn't exist | `404.html` |
 
-## Please keep in mind
+New page: add the file, plus a rewrite in `vercel.json` if it needs a short address. Nothing has
+to change on the main project.
 
-- **This repo does not deploy.** Changes are reviewed and merged into the main project by hand.
-  Please send them as a pull request.
-- **Consent first.** The site serves EU visitors. Google Analytics only loads after the visitor
+## What stays in the main project (not here)
+
+- **The new-patient form (`/intake`) and the privacy pages (`/privacidad`, `/privacy`).** Patients
+  enter clinical data there, so they stay under Iván's direct control. On this project's own
+  `.vercel.app` address they redirect to the live site.
+- **Images that already exist** (`media/…`, `favicon.png`, `consultorio.jpg`). The patient portal
+  and other private pages use them too, so the main project keeps serving its own copies.
+  Replacing one of these files here changes nothing on the live site. To use a different image,
+  add it under a **new name**; new files are served from here.
+- The patient portal, admin panel and `/api` routes.
+
+## Rules
+
+- **Consent first.** Many visitors are in the EU. Google Analytics only loads after the visitor
   accepts the cookie banner (see `window.cargarAnalytics` in `index.html`). Any Ads / GTM tag must
   go through the same gate (or Consent Mode v2 defaulting to *denied*). Never load it before consent.
-- **Don't touch:** the JSON-LD block and the `#areas` section of `index.html` (both are generated
-  and get overwritten), the `GAS` URL / routing script in `index.html`, and the `/api/intake` calls
-  in `intake-vercel.html`.
-- `index-en.html` is generated from `index.html`. Edit `index.html`; English changes are ported by hand.
-- The intake form can't be submitted locally (its backend isn't here). Test conversions on the live
-  site with Tag Manager's preview mode.
+- **New or rewritten pages** go to a branch first; send Iván the preview link and merge after his OK.
+  Small SEO changes (titles, descriptions, robots.txt, sitemap.xml) can go straight to `main`.
+- **Don't touch:** the `GAS` URL / routing script in `index.html`.
+- **Generated parts.** Iván's tools write some parts of these files and push them here as normal
+  commits. Edit around them, not inside them:
+  - the JSON-LD block (`<script type="application/ld+json">`) and the `#areas` section of `index.html`
+  - the testimonials between `<!-- testimonios:start -->` and `<!-- testimonios:end -->`
+  - **`index-en.html` as a whole**: it's regenerated from `index.html`. Make changes in
+    `index.html`, and tell Iván so the English version is regenerated; direct edits to
+    `index-en.html` get overwritten.
+- Pull before you push: Iván's tools also commit to `main`.
