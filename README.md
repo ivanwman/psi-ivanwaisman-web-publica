@@ -33,11 +33,12 @@ to change on the main project.
 - **New or rewritten pages** go to a branch first; send Iván the preview link and merge after his OK.
   Small SEO changes (titles, descriptions, robots.txt, sitemap.xml) can go straight to `main`.
 - **Don't touch:** the `GAS` URL / routing script in `index.html`.
-- **Generated parts.** Iván's tools write some parts of these files and push them here as normal
-  commits. Edit around them, not inside them:
-  - the JSON-LD block (`<script type="application/ld+json">`) and the `#areas` section of `index.html`
+- **The English home page (`index-en.html`) and any new English pages are yours**, written by
+  hand. Nothing generates or overwrites them. If Iván's credentials or reviews change, he'll let
+  you know so the English pages can be updated.
+- **Generated parts of the Spanish page (`index.html`).** Iván's tools rewrite these blocks and
+  push them here as normal commits. Edit around them, not inside them:
+  - the JSON-LD block (`<script type="application/ld+json">`)
+  - everything between `<!-- credenciales:…:start -->` and `<!-- credenciales:…:end -->`
   - the testimonials between `<!-- testimonios:start -->` and `<!-- testimonios:end -->`
-  - **`index-en.html` as a whole**: it's regenerated from `index.html`. Make changes in
-    `index.html`, and tell Iván so the English version is regenerated; direct edits to
-    `index-en.html` get overwritten.
 - Pull before you push: Iván's tools also commit to `main`.
