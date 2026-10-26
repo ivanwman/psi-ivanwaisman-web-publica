@@ -3,8 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.png" type="image/png">
-  <title>Online Psychologist | Scientific, human and contextual psychology — Iván Waisman, MSc.</title>
-  <meta name="description" content="Licensed psychologist and MSc in General Health Psychology. Evidence-based contextual psychology (ACT, DBT, mindfulness) to improve your relationships and habits, and better handle your emotions.">
+  <title>English-Speaking Psychologist in Barcelona - Iván Waisman</title>
+  <meta name="description" content="Registered psychologist (COP-CAT 36779) offering online therapy in English for people in Barcelona: Acceptance and Commitment Therapy and contextual therapy.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://psi.ivanwaisman.com/en">
 
@@ -17,16 +17,16 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_AR">
   <meta property="og:url" content="https://psi.ivanwaisman.com/en">
-  <meta property="og:title" content="Online Psychologist | Scientific, human and contextual psychology — Iván Waisman, MSc.">
-  <meta property="og:description" content="Licensed psychologist and MSc in General Health Psychology. Evidence-based contextual psychology (ACT, DBT, mindfulness) to improve your relationships and habits, and better handle your emotions.">
+  <meta property="og:title" content="English-Speaking Psychologist in Barcelona - Iván Waisman">
+  <meta property="og:description" content="Registered psychologist (COP-CAT 36779) offering online therapy in English for people in Barcelona: Acceptance and Commitment Therapy and contextual therapy.">
   <meta property="og:image" content="https://psi.ivanwaisman.com/media/og-cover-en.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Iván Waisman, MSc. — scientific, human and contextual psychology">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Online Psychologist | Scientific, human and contextual psychology — Iván Waisman, MSc.">
-  <meta name="twitter:description" content="Licensed psychologist and MSc in General Health Psychology. Evidence-based contextual psychology (ACT, DBT, mindfulness) to improve your relationships and habits, and better handle your emotions.">
+  <meta name="twitter:title" content="English-Speaking Psychologist in Barcelona - Iván Waisman">
+  <meta name="twitter:description" content="Registered psychologist (COP-CAT 36779) offering online therapy in English for people in Barcelona: Acceptance and Commitment Therapy and contextual therapy.">
   <meta name="twitter:image" content="https://psi.ivanwaisman.com/media/og-cover-en.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1638,7 +1638,7 @@
   <div id="iab-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(37,29,23,0.93);align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);">
     <div style="background:#fffcf8;border-radius:22px;padding:36px 28px;max-width:340px;width:100%;text-align:center;box-shadow:0 30px 70px rgba(83,56,34,0.22);">
       <div style="font-size:40px;margin-bottom:14px;">🌐</div>
-      <h2 style="font-family:'Georgia',serif;font-size:22px;margin:0 0 12px;color:#3d2e24;line-height:1.2;">Open in your browser</h2>
+      <div id="iab-title" style="font-family:'Georgia',serif;font-size:22px;margin:0 0 12px;color:#3d2e24;line-height:1.2;">Open in your browser</div>
       <p style="color:#695a4d;font-size:14px;line-height:1.65;margin:0 0 24px;">Instagram's browser can't display this content properly. Open it in Safari or Chrome to continue.</p>
       <button id="iab-copy-btn" onclick="iabCopyLink()" style="background:linear-gradient(135deg,#b88656,#a7703c);color:#fffaf6;border:none;border-radius:999px;padding:13px 28px;font-size:14px;font-weight:700;cursor:pointer;width:100%;letter-spacing:0.03em;">Copy link</button>
       <p id="iab-copied" style="display:none;color:#2f7a54;font-size:13px;font-weight:600;margin:12px 0 0;">Done! Paste the link in Safari or Chrome.</p>
@@ -1788,8 +1788,8 @@
         <div class="orb orb-3"></div>
       </div>
 
-      <h1 class="hero-script" id="heroScript">Iván Waisman</h1>
-      <h2 class="hero-subtitle" id="heroSubtitle">Scientific, contextual, and humanistic psychology</h2>
+      <p class="hero-script" id="heroScript">Iván Waisman</p>
+      <h1 class="hero-subtitle" id="heroSubtitle">English-Speaking Psychologist in Barcelona</h1>
       <!-- Las mismas matrículas del nav, para los anchos donde el nav no puede mostrarlas.
            Sin texto traducible a propósito: son siglas y números, valen igual en los dos idiomas. -->
       <p class="hero-licencias">
@@ -2178,6 +2178,7 @@
     </section>
 
     <footer class="footer">
+      <p class="footer-lang"><a href="/" hreflang="es" lang="es">Español</a> · <a href="/en" hreflang="en" lang="en">English</a></p>
       <p id="footerText">Iván Waisman, MSc. All rights reserved.</p>
     </footer>
 
@@ -2403,7 +2404,7 @@
           accept: 'Accept'
         },
         hero: {
-          subtitle: 'Scientific, contextual, and humanistic psychology',
+          subtitle: 'English-Speaking Psychologist in Barcelona',
           lead: 'Build a fulfilling life with a <strong>personalized</strong>, <strong>evidence-based</strong> approach — and <strong>loving</strong> throughout the whole journey.',
           cta: 'Book an appointment',
           testimonials: 'Testimonials'
@@ -2595,7 +2596,7 @@
       setText('cookieReject', T.cookies.reject);
       setText('cookieAccept', T.cookies.accept);
 
-      var iabH2 = document.querySelector('#iab-overlay h2');
+      var iabH2 = document.getElementById('iab-title');
       if (iabH2) iabH2.textContent = T.iab.title;
       var iabP = document.querySelector('#iab-overlay > div > p:first-of-type');
       if (iabP) iabP.textContent = T.iab.desc;

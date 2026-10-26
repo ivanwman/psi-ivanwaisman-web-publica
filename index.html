@@ -1640,7 +1640,7 @@
   <div id="iab-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(37,29,23,0.93);align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);">
     <div style="background:#fffcf8;border-radius:22px;padding:36px 28px;max-width:340px;width:100%;text-align:center;box-shadow:0 30px 70px rgba(83,56,34,0.22);">
       <div style="font-size:40px;margin-bottom:14px;">🌐</div>
-      <h2 style="font-family:'Georgia',serif;font-size:22px;margin:0 0 12px;color:#3d2e24;line-height:1.2;">Abrí en tu navegador</h2>
+      <div id="iab-title" style="font-family:'Georgia',serif;font-size:22px;margin:0 0 12px;color:#3d2e24;line-height:1.2;">Abrí en tu navegador</div>
       <p style="color:#695a4d;font-size:14px;line-height:1.65;margin:0 0 24px;">El navegador de Instagram no puede mostrar este contenido correctamente. Abrilo en Safari o Chrome para continuar.</p>
       <button id="iab-copy-btn" onclick="iabCopyLink()" style="background:linear-gradient(135deg,#b88656,#a7703c);color:#fffaf6;border:none;border-radius:999px;padding:13px 28px;font-size:14px;font-weight:700;cursor:pointer;width:100%;letter-spacing:0.03em;">Copiar link</button>
       <p id="iab-copied" style="display:none;color:#2f7a54;font-size:13px;font-weight:600;margin:12px 0 0;">¡Listo! Pegá el link en Safari o Chrome.</p>
@@ -1800,8 +1800,8 @@
         <div class="orb orb-3"></div>
       </div>
 
-      <h1 class="hero-script" id="heroScript">Iván Waisman</h1>
-      <h2 class="hero-subtitle" id="heroSubtitle">Psicología científica, contextual y humana</h2>
+      <p class="hero-script" id="heroScript">Iván Waisman</p>
+      <h1 class="hero-subtitle" id="heroSubtitle">Psicología científica, contextual y humana</h1>
       <!-- Las mismas matrículas del nav, para los anchos donde el nav no puede mostrarlas.
            Sin texto traducible a propósito: son siglas y números, valen igual en los dos idiomas. -->
       <p class="hero-licencias">
@@ -2237,6 +2237,7 @@
     </section>
 
     <footer class="footer">
+      <p class="footer-lang"><a href="/" hreflang="es" lang="es">Español</a> · <a href="/en" hreflang="en" lang="en">English</a></p>
       <p id="footerText">Iván Waisman, MSc. Todos los derechos reservados.</p>
     </footer>
 
@@ -2462,7 +2463,7 @@
           accept: 'Accept'
         },
         hero: {
-          subtitle: 'Scientific, contextual, and humanistic psychology',
+          subtitle: 'English-Speaking Psychologist in Barcelona',
           lead: 'Build a fulfilling life with a <strong>personalized</strong>, <strong>evidence-based</strong> approach — and <strong>loving</strong> throughout the whole journey.',
           cta: 'Book an appointment',
           testimonials: 'Testimonials'
@@ -2580,8 +2581,6 @@
       if (/^\/(en)(\/|$)/.test(location.pathname)) return 'en';
       if (/^\/(es)(\/|$)/.test(location.pathname)) return 'es';
       try { var s = localStorage.getItem('psi_lang'); if (s === 'en' || s === 'es') return s; } catch(e) {}
-      var bl = (navigator.language || '').toLowerCase();
-      if (bl.startsWith('en')) return 'en';
       return 'es';
     }
 
@@ -2654,7 +2653,7 @@
       setText('cookieReject', T.cookies.reject);
       setText('cookieAccept', T.cookies.accept);
 
-      var iabH2 = document.querySelector('#iab-overlay h2');
+      var iabH2 = document.getElementById('iab-title');
       if (iabH2) iabH2.textContent = T.iab.title;
       var iabP = document.querySelector('#iab-overlay > div > p:first-of-type');
       if (iabP) iabP.textContent = T.iab.desc;
