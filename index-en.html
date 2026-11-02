@@ -530,7 +530,7 @@
 
     /* ── HERO ── */
     .hero {
-      position: relative; min-height: 100vh;
+      position: relative; min-height: min(100vh, 1200px);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       padding: 128px 28px 144px; text-align: center; overflow: visible;
       isolation: isolate;
@@ -760,9 +760,9 @@
 
     /* ── SCROLL REVEAL ── */
     .reveal {
-      opacity: 0; transform: translateY(32px);
       transition: opacity 1.4s var(--ease), transform 1.4s var(--ease);
     }
+    .reveal.reveal-wait { opacity: 0; transform: translateY(32px); }
     .reveal.in { opacity: 1; transform: translateY(0); }
     .d1 { transition-delay: 0.13s; }
     .d2 { transition-delay: 0.29s; }
@@ -1640,10 +1640,10 @@
   <div id="iab-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(37,29,23,0.93);align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);">
     <div style="background:#fffcf8;border-radius:22px;padding:36px 28px;max-width:340px;width:100%;text-align:center;box-shadow:0 30px 70px rgba(83,56,34,0.22);">
       <div style="font-size:40px;margin-bottom:14px;">🌐</div>
-      <div id="iab-title" style="font-family:'Georgia',serif;font-size:22px;margin:0 0 12px;color:#3d2e24;line-height:1.2;">Open in your browser</div>
-      <p style="color:#695a4d;font-size:14px;line-height:1.65;margin:0 0 24px;">Instagram's browser can't display this content properly. Open it in Safari or Chrome to continue.</p>
-      <button id="iab-copy-btn" onclick="iabCopyLink()" style="background:linear-gradient(135deg,#b88656,#a7703c);color:#fffaf6;border:none;border-radius:999px;padding:13px 28px;font-size:14px;font-weight:700;cursor:pointer;width:100%;letter-spacing:0.03em;">Copy link</button>
-      <p id="iab-copied" style="display:none;color:#2f7a54;font-size:13px;font-weight:600;margin:12px 0 0;">Done! Paste the link in Safari or Chrome.</p>
+      <div id="iab-title" style="font-family:'Georgia',serif;font-size:22px;margin:0 0 12px;color:#3d2e24;line-height:1.2;"></div>
+      <p style="color:#695a4d;font-size:14px;line-height:1.65;margin:0 0 24px;"></p>
+      <button id="iab-copy-btn" onclick="iabCopyLink()" style="background:linear-gradient(135deg,#b88656,#a7703c);color:#fffaf6;border:none;border-radius:999px;padding:13px 28px;font-size:14px;font-weight:700;cursor:pointer;width:100%;letter-spacing:0.03em;"></button>
+      <p id="iab-copied" style="display:none;color:#2f7a54;font-size:13px;font-weight:600;margin:12px 0 0;"></p>
     </div>
   </div>
 
@@ -3034,7 +3034,12 @@
             if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
           });
         }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+        /* El texto queda visible hasta el primer scroll real: quien no scrollea (Google) lo ve todo */
+        if (!reduceMotion) window.addEventListener('scroll', function () {
+          document.querySelectorAll('.reveal').forEach(function (el) {
+            if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add('reveal-wait'); io.observe(el); }
+          });
+        }, { once: true, passive: true });
       } else {
         document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
       }
