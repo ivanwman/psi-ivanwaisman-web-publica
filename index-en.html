@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.png" type="image/png">
   <title>English-Speaking Psychologist and Therapist in Barcelona</title>
-  <meta name="description" content="Registered psychologist (COP-CAT 36779) in Barcelona, working in English, for self-esteem, perfectionism, relationships and anxiety. Free intro call.">
+  <meta name="description" content="Therapy in English, online, for people in Barcelona: self-esteem, perfectionism, relationships and anxiety. Registered psychologist (COP-CAT 36779). Free intro call.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://psi.ivanwaisman.com/en">
 
@@ -31,7 +31,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Luxurious+Script&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Luxurious+Script&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap">
 
   <script type="application/ld+json">
   {
@@ -981,21 +981,24 @@
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     html[lang="es"] .en-only { display: none !important; }
-    .pq-intro { font-size: 14.5px; color: var(--muted); line-height: 1.85; margin: 0 auto 18px; max-width: 62ch; text-align: left; }
+    .pq-intro { font-size: 14.5px; color: var(--muted); line-height: 1.85; margin: 0 auto 18px; max-width: 62ch; text-align: justify; text-align-last: center; }
     .pq-intro strong { color: var(--text); font-weight: 600; }
     .pq-intro a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
     .pq-center { text-align: center; }
-    .pq-card .pq-formacion.pq-left { text-align: left; max-width: 62ch; margin-left: auto; margin-right: auto; }
+    .pq-card .pq-formacion.pq-left { text-align: justify; text-align-last: center; max-width: 62ch; margin-left: auto; margin-right: auto; }
     .pq-card-tight { margin-bottom: 44px; padding-bottom: 20px; }
     .pq-card-tight > .pq-intro:last-child { margin-bottom: 0; }
     .hero-intro { max-width: 58ch; margin: 18px auto 0; text-align: center; animation: fadeUp 0.8s var(--ease) 0.66s both; }
-    .faq-q { font-size: 15.5px; font-weight: 600; color: var(--text); line-height: 1.5; margin: 22px auto 6px; max-width: 62ch; text-align: left; }
-    .faq-q:first-child { margin-top: 0; }
+    .faq-q { font-size: 15.5px; font-weight: 600; color: var(--text); line-height: 1.5; margin: 0 auto 8px; max-width: 62ch; text-align: center; padding-top: 22px; border-top: 1px solid var(--border); }
+    .faq-q:first-child { padding-top: 0; border-top: 0; }
     .faq-card .faq-q, .faq-card .pq-intro { max-width: 560px; }
+    .faq-card .pq-intro { font-weight: 300; font-size: 14px; margin-bottom: 22px; }
+    .faq-card .pq-intro:last-child { margin-bottom: 0; }
     .footer-note { max-width: 70ch; margin: 10px auto 0; font-size: 12px; line-height: 1.7; color: var(--muted); letter-spacing: 0; font-weight: 400; }
     .pq-formacion { font-size: 14.5px; color: var(--muted); line-height: 1.85; text-align: center; margin: 0 auto 26px; max-width: 60ch; }
     .pq-formacion strong { color: var(--text); font-weight: 600; }
     .pq-temas { max-width: 680px; }
+    .pq-temas + .pq-intro { margin-top: 30px; }
     .pq-casos-head { text-align: center; margin-bottom: 30px; }
     .pq-casos-title {
       font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3vw, 33px); font-weight: 600;
@@ -1204,6 +1207,17 @@
     .footer p { font-size: 12px; color: var(--muted); letter-spacing: 0.12em; font-weight: 600; }
     .footer .footer-lang { margin-bottom: 12px; }
     .footer .footer-lang a { color: #000; text-decoration: none; }
+    .footer-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; max-width: 880px; margin: 8px auto 16px; }
+    html[lang="es"] .footer-cols { grid-template-columns: 1fr; }
+    .footer .footer-col-title { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
+    .footer .footer-col-text { font-size: 12px; letter-spacing: 0; font-weight: 400; line-height: 1.65; }
+    .footer .footer-col-text a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .footer .footer-col .footer-lang { margin-bottom: 0; }
+    .footer .footer-col .footer-lang a { text-decoration: none; font-weight: 600; }
+    .footer .footer-bottom { max-width: 880px; margin: 0 auto; padding-top: 12px; border-top: 1px solid var(--border); font-size: 11px; letter-spacing: 0.04em; font-weight: 500; line-height: 1.6; }
+    @media (max-width: 640px) {
+      .footer-cols { grid-template-columns: 1fr; gap: 14px; }
+    }
 
     .audio-toggle {
       position: fixed; right: 18px; bottom: 72px; z-index: 240;
@@ -1319,10 +1333,10 @@
         grid-area: script;
         position: relative;
         z-index: 2;
-        justify-self: start;
+        justify-self: center;
         width: auto;
         margin: 0 0 4px;
-        text-align: left;
+        text-align: center;
         pointer-events: auto;
       }
       .hero-subtitle {
@@ -1330,34 +1344,35 @@
         max-width: none;
         position: relative;
         z-index: 2;
-        justify-self: start;
+        justify-self: center;
         align-self: start;
         margin: 0 0 14px;
         line-height: 1.15;
         white-space: normal;
-        text-align: left;
+        text-align: center;
       }
       .hero-lead {
         grid-area: lead;
-        justify-self: start;
+        justify-self: center;
         align-self: start;
         max-width: 430px;
         margin: 0;
         line-height: 1.42;
-        text-align: left;
+        text-align: center;
       }
       .hero-intro {
         grid-area: intro;
-        justify-self: start;
+        justify-self: center;
         align-self: start;
         max-width: 470px;
         margin: 16px 0 0;
-        text-align: left;
+        text-align: center;
+        text-align-last: auto;
       }
       .hero-actions {
         grid-area: actions;
-        justify-self: start;
-        justify-content: flex-start;
+        justify-self: center;
+        justify-content: center;
         padding-right: 0;
         margin-top: 22px;
       }
@@ -1827,7 +1842,7 @@
         <img class="hero-portrait" src="./media/ivan-portrait-chat-inner-circle-tight.png" alt="Portrait of Iván Waisman" width="465" height="465" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <p class="hero-lead" id="heroLead">Build a fulfilling life with a <strong>personalized</strong>, <strong>evidence-based</strong> approach, and <strong>loving</strong> throughout the whole journey.</p>
-      <p class="pq-intro hero-intro en-only" id="heroIntro">I'm Iván Waisman, a registered psychologist (COP-CAT 36779) offering therapy in English for people living in Barcelona. If you've been looking for an English-speaking therapist in Barcelona, you can see here who I work with, how I work and what it costs. Sessions are online, and if you'd rather meet in person, I also see people at my practice in Barcelona on request.</p>
+      <p class="pq-intro hero-intro en-only" id="heroIntro">Hi, I'm Iván. I'm a psychologist registered in Catalonia (COP-CAT 36779), and I offer therapy in English, online, for people living in Barcelona. If you've been looking for an English-speaking therapist, here you'll find who I work with, how I work and what it costs. If it sounds right, feel free to book a free intro call.</p>
       <div class="hero-actions">
 <a href="/intake" class="btn-primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1884,9 +1899,9 @@
       <div class="pq-verso reveal d1" id="pqVerso"><p>For those who don't just want<br>to stop feeling,<br>but to build a life<br>that is meaningful.</p> <p>For those who know that pain is,<br>at times,<br>unavoidable, and so<br>choose<br>to make it worth it.</p> <p>For those who know we only live<br>once.</p></div>
 
       <div class="pq-card reveal en-only">
-        <p class="pq-intro">Most of the people I work with are <strong>very hard on themselves</strong>. They hold themselves to high standards, do what others expect of them, and never quite feel like enough, however much they get done. Self-esteem, perfectionism and relationship difficulties usually arrive together, and sometimes they show up as procrastination, as anxiety, or as the same patterns coming back with the people who matter most.</p>
-        <p class="pq-intro">I know these struggles from the inside, because I've been through them myself. In my experience, these are also the people who stay longest and feel the most improvement in therapy with me.</p>
-        <p class="pq-intro">Many people come to me because they want <strong>practical tools and exercises</strong> to manage their emotions, not only a space to talk. Some have already tried therapy and felt it wasn't moving anything. If that's you, ask me on the intro call exactly how my sessions work.</p>
+        <p class="pq-intro">Most of the people I work with are <strong>very hard on themselves</strong>: high standards, doing what others expect of them, and still never quite feeling like enough. Self-esteem, perfectionism and relationships usually come in a bundle (I know, that's three things, but they rarely show up alone), and sometimes they look like procrastination, anxiety, or the same patterns coming back with the people who matter most.</p>
+        <p class="pq-intro">I've been through some of this myself, and psychology gave me the tools to work through it, which I now use in my work.</p>
+        <p class="pq-intro">Many people come to me looking for <strong>practical tools and exercises</strong>, not only a space to talk. Some have tried therapy before and felt it wasn't moving anything. If that's you, feel free to ask me on the intro call exactly how my sessions work.</p>
       </div>
 
       <div class="pq-card reveal">
@@ -1902,6 +1917,7 @@
           <li class="area-chip is-featured" id="pqTema8">Feeling low or stuck</li>
           <li class="area-chip is-featured" id="pqTema9">Healthy habits</li>
         </ul>
+        <!-- Iván writes this paragraph himself (voice call 13 Nov); the current text stays until he sends it. -->
         <p class="pq-intro pq-center en-only">Anxiety is an umbrella term that covers very different experiences, from worry and rumination in the evening to fear in social situations. Part of our work is understanding what's really happening for you, and in which moments.</p>
       </div>
 
@@ -1971,7 +1987,7 @@
         <h2 class="section-title reveal" id="pillarsTitle">A comprehensive approach</h2>
       </div>
       <div class="pq-card pq-card-tight reveal en-only">
-        <p class="pq-intro">My work draws on <strong>Acceptance and Commitment Therapy (ACT)</strong>, a contemporary form of CBT. The world teaches us that we need to stop feeling anxious, afraid or sad before we can start living the life we want. ACT turns that around. We do explore your history, but the main focus is on how you want to live, starting now. Sessions are warm, active and collaborative, and the work continues in your daily life through small exercises and practices.</p>
+        <p class="pq-intro">My work draws on <strong>Acceptance and Commitment Therapy (ACT)</strong>, a contemporary form of CBT. Most of us learn that we first have to stop feeling anxious, afraid or sad, and only then can we start living the life we want – with ACT we try to turn that around. We'll look at your history too, but the main focus is how you want to live, starting now. Sessions are warm, active and collaborative (expect a bit of homework), and the work carries on in your daily life through small exercises.</p>
       </div>
       <div class="pillars">
         <div class="pillar reveal">
@@ -1996,8 +2012,9 @@
         <h2 class="section-title reveal">For expats in Barcelona</h2>
       </div>
       <div class="pq-card pq-card-tight reveal en-only">
-        <p class="pq-intro">Leaving home opens a door that is hard to close. You end up with several homes, and in each one you miss the others. Friendships live at a distance, language can get in the way, and loneliness is often less about lacking friends than about lacking a support network. I moved countries myself about ten years ago, so I know some of this first-hand.</p>
-        <p class="pq-intro">The expats who contact me in Barcelona mostly come with relationship and self-esteem struggles. With expats in other countries, settling in, work and stress come up often too.</p>
+        <p class="pq-intro">Moving abroad is rarely only about work or studies. Often it's about wanting a better life, and sometimes that means leaving things you really love behind. Your people are far away, the language takes effort, and building a life again, with friends and a support network, takes time and can get lonely along the way.</p>
+        <p class="pq-intro">I left my hometown ten years ago and have lived in Argentina, the Netherlands and Spain since. Throughout that journey I learned how to manage and create a new life in a new place, and now I use it in my work.</p>
+        <p class="pq-intro">In my work with expats, relationships and self-esteem come up a lot, and so do settling in, work and stress.</p>
       </div>
     </section>
 
@@ -2026,11 +2043,7 @@
         <div class="consultorio-items reveal">
           <div class="c-item">
             <div class="c-badge" id="virtualBadge">Worldwide</div>
-            <p id="virtualDesc">Online sessions, wherever you are, in English or Spanish.</p>
-          </div>
-          <div class="c-item en-only">
-            <div class="c-badge">Barcelona</div>
-            <p>In person on request at Carrer de Floridablanca 68, Barcelona, in Sant Antoni.</p>
+            <p id="virtualDesc">Online sessions, wherever you are (Barcelona included), in English or Spanish.</p>
           </div>
           <div class="c-item">
             <div class="c-badge" id="inPersonBadge">Bariloche, Patagonia</div>
@@ -2057,16 +2070,15 @@
       </div>
       <div class="pq-card reveal">
         <p class="pq-formacion pq-left" id="pqFormacion">I hold a <strong>Licentiate Degree in Psychology</strong> (Argentina), a <strong>Master's Degree in General Health Psychology</strong> (Spain) and an <strong>International Diploma in Contextual Behavioural Psychotherapies</strong>. It is a thorough training in clinical and health psychology that prepares me to support people through a wide range of situations.</p>
-        <p class="pq-intro en-only">In short: MSc in Psychology, trained in ACT, DBT and FAP. I'm registered with the Col·legi Oficial de Psicologia de Catalunya (no. 36779), and you can check that on the college's <a href="https://www.copc.cat/contacte/carlos-ivan-waisman-195283" target="_blank" rel="noopener noreferrer">public register</a>.</p>
-        <p class="pq-intro en-only">Booking a first session is already an act of courage and a real step towards feeling better. I keep that in mind in every session, especially the first one. My first focus is your comfort and your privacy, and helping you take small steps forward at your own pace. You decide what to share and when.</p>
       </div>
 
       <div class="section-head en-only" id="fees" style="margin-top: 64px;">
         <h2 class="section-title reveal">Fees and the first call</h2>
       </div>
       <div class="pq-card reveal en-only">
-        <p class="pq-intro">Sessions cost an estimated <strong>€40 to €75</strong>. Your exact fee is worked out in my intake form, based on your situation. Sessions usually last 45 to 50 minutes, and we agree together how often to meet.</p>
-        <p class="pq-intro">Before anything else, we can have a <strong>free intro call of 20 to 25 minutes</strong>, so you can ask your questions and see whether we're a good fit.</p>
+        <p class="pq-intro">Sessions cost an estimated <strong>€40 to €75</strong>, and your exact fee is worked out in my intake form, based on your situation. A session lasts around 45 to 50 minutes.</p>
+        <p class="pq-intro">Before anything else, feel free to book a <strong>free intro call of 20 to 25 minutes</strong>. Ask me anything, and we'll both see whether we're a good fit, with no commitment either way.</p>
+        <p class="pq-intro">Booking a first session is already an act of courage, and a real step towards feeling better. I keep that in mind, especially at the start: your comfort and your privacy come first, we go at your pace, and you decide what to share and when.</p>
       </div>
 
       <div class="section-head en-only" id="faq" style="margin-top: 64px;">
@@ -2074,13 +2086,15 @@
       </div>
       <div class="pq-card faq-card reveal en-only">
         <h3 class="faq-q">What's the difference between a psychologist and a therapist?</h3>
-        <p class="pq-intro">A psychologist has completed a full university degree in Psychology. "Therapist" is a broader word: some therapists are psychologists, and others have trained in one method through a shorter course. I'm a registered psychologist with a Master's in General Health Psychology, and I'm also trained in ACT, DBT and FAP.</p>
+        <p class="pq-intro">A psychologist has a full university degree in Psychology. "Therapist" is a broader word: some therapists are psychologists, and others trained in one method through a shorter course. I'm a psychologist, registered in Catalonia and in Argentina, with a Master's in General Health Psychology, and trained in ACT, DBT and FAP.</p>
         <h3 class="faq-q">Are sessions in English?</h3>
-        <p class="pq-intro">Yes. Sessions are in English or in Spanish, whichever you prefer.</p>
-        <h3 class="faq-q">Online or in person?</h3>
-        <p class="pq-intro">Most sessions are online, over Google Meet. You need a phone, tablet or computer with a camera and microphone, and a quiet place where you can speak freely. If you'd rather meet in person, I also see people at my practice in Barcelona on request.</p>
+        <p class="pq-intro">Yes, sessions are in English or Spanish, whichever you prefer. And if you're feeling funny, we can do both.</p>
+        <h3 class="faq-q">Are sessions online?</h3>
+        <p class="pq-intro">Yes, all sessions are online, over Google Meet. All you need is a phone, tablet or computer with a camera and microphone, and a quiet place where you can talk freely (a park or an office works too).</p>
         <h3 class="faq-q">How often do we meet?</h3>
-        <p class="pq-intro">Most research on therapy is done with weekly sessions, so weekly is the safest bet. Not everyone has the time or budget for that, so you book your own sessions and we agree the frequency together.</p>
+        <p class="pq-intro">Most research on therapy uses weekly sessions, so weekly is usually the best place to start. That said, not everyone has the time or budget for it, so feel free to book at whatever pace works for you, and we'll find the rhythm together.</p>
+        <h3 class="faq-q">How do I find a therapist in English in Barcelona?</h3>
+        <p class="pq-intro">Look for someone registered with a professional college (in Catalonia, the COP-CAT has a <a href="https://www.copc.cat/contacte/carlos-ivan-waisman-195283" target="_blank" rel="noopener noreferrer">public register</a>), who works in your language, and whose way of working makes sense to you. A free intro call is the easiest way to find out if it clicks, with me or with anyone else.</p>
       </div>
     </section>
 
@@ -2255,10 +2269,21 @@
     </section>
 
     <footer class="footer">
-      <p class="footer-lang"><a href="/" hreflang="es" lang="es">Español</a> · <a href="/en" hreflang="en" lang="en">English</a></p>
-      <p id="footerText">Iván Waisman, MSc. All rights reserved.</p>
-      <p class="footer-note en-only">If you're in crisis or thinking about suicide, please contact emergency services. In Spain, call 112, or 024 for the suicide prevention line.</p>
-      <p class="footer-note en-only">This site offers general information and doesn't create a therapeutic relationship. Registered in Catalonia (COP-CAT 36779) and with the Colegio de Psicólogos de la Zona Andina (CPZA 2876).</p>
+      <div class="footer-cols">
+        <div class="footer-col en-only">
+          <p class="footer-col-title">Registered</p>
+          <p class="footer-col-text"><a href="https://www.copc.cat/contacte/carlos-ivan-waisman-195283" target="_blank" rel="noopener noreferrer">COP-CAT 36779</a> · <a href="https://www.cpzonandina.org/profesionales/listado-de-colegiados/" target="_blank" rel="noopener noreferrer">CPZA 2876</a></p>
+        </div>
+        <div class="footer-col en-only">
+          <p class="footer-col-title">In a crisis</p>
+          <p class="footer-col-text">Thinking about suicide or in crisis? In Spain, call 112, or 024 (suicide prevention line).</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title en-only">Language</p>
+          <p class="footer-col-text footer-lang"><a href="/" hreflang="es" lang="es">Español</a> · <a href="/en" hreflang="en" lang="en">English</a></p>
+        </div>
+      </div>
+      <p class="footer-bottom"><span id="footerText">Iván Waisman, MSc. All rights reserved.</span><span class="en-only"> · This site offers general information and doesn't create a therapeutic relationship.</span></p>
     </footer>
 
   </div>
@@ -2558,7 +2583,7 @@
           title: 'Practice',
           lead: '',
           virtualBadge: 'Worldwide', virtualTitle: 'Worldwide',
-          virtualDesc: 'Online sessions, wherever you are, in English or Spanish.',
+          virtualDesc: 'Online sessions, wherever you are (Barcelona included), in English or Spanish.',
           inPersonBadge: 'Bariloche, Patagonia', inPersonTitle: 'Bariloche, Patagonia',
           inPersonDesc: "Come work with me in my office in Argentine's Patagonia, in beautiful Bariloche city.",
           cta: 'Book an appointment', imgAlt: "Iván Waisman's practice, Bariloche"
