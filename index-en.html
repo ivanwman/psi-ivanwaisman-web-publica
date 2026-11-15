@@ -1667,6 +1667,15 @@
         text-align: center;
       }
     }
+    /* Hero intro card (Iván 15 Nov): same look as the cards below, with space before the buttons. */
+    #heroIntro.hero-intro-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 6px; box-shadow: var(--shadow-soft);
+      padding: 22px 26px; margin-top: 18px; margin-bottom: 40px; max-width: 560px;
+      font-size: 14.5px; color: var(--muted); line-height: 1.85; text-align: center; text-align-last: auto;
+    }
+    #heroIntro.hero-intro-card p { margin: 0 0 10px; }
+    #heroIntro.hero-intro-card p:last-child { margin-bottom: 0; }
+    @media (max-width: 640px) { #heroIntro.hero-intro-card { padding: 18px 18px; margin-bottom: 34px; } }
   </style>
 </head>
 <body>
@@ -1842,7 +1851,11 @@
         <img class="hero-portrait" src="./media/ivan-portrait-chat-inner-circle-tight.png" alt="Portrait of Iván Waisman" width="465" height="465" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <p class="hero-lead" id="heroLead">Build a fulfilling life with a <strong>personalized</strong>, <strong>evidence-based</strong> approach, and <strong>loving</strong> throughout the whole journey.</p>
-      <p class="pq-intro hero-intro en-only" id="heroIntro">Hi, I'm Iván. I'm a psychologist registered in Catalonia (COP-CAT 36779), and I offer therapy in English, online, for people living in Barcelona. If you've been looking for an English-speaking therapist, here you'll find who I work with, how I work and what it costs. If it sounds right, feel free to book a free intro call.</p>
+      <div class="hero-intro hero-intro-card en-only" id="heroIntro">
+        <p>Hi! I'm Iván. I'm a registered psychologist in Barcelona.</p>
+        <p>I work with English- and Spanish-speaking people living in Barcelona.</p>
+        <p>On this page, I'll outline how I work, including fees and modality. Feel free to reach out for more information or for a first short meeting at no cost.</p>
+      </div>
       <div class="hero-actions">
 <a href="/intake" class="btn-primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1899,26 +1912,29 @@
       <div class="pq-verso reveal d1" id="pqVerso"><p>For those who don't just want<br>to stop feeling,<br>but to build a life<br>that is meaningful.</p> <p>For those who know that pain is,<br>at times,<br>unavoidable, and so<br>choose<br>to make it worth it.</p> <p>For those who know we only live<br>once.</p></div>
 
       <div class="pq-card reveal en-only">
-        <p class="pq-intro">Most of the people I work with are <strong>very hard on themselves</strong>: high standards, doing what others expect of them, and still never quite feeling like enough. Self-esteem, perfectionism and relationships usually come in a bundle (I know, that's three things, but they rarely show up alone), and sometimes they look like procrastination, anxiety, or the same patterns coming back with the people who matter most.</p>
-        <p class="pq-intro">I've been through some of this myself, and psychology gave me the tools to work through it, which I now use in my work.</p>
-        <p class="pq-intro">Many people come to me looking for <strong>practical tools and exercises</strong>, not only a space to talk. Some have tried therapy before and felt it wasn't moving anything. If that's you, feel free to ask me on the intro call exactly how my sessions work.</p>
+        <p class="pq-intro">Most people I work with are usually <strong>very hard on themselves</strong>: impossible-to-reach high standards and people pleasing, and still this feeling like it's not enough or they're missing out on their own lives by being there for their loved ones.</p>
+        <p class="pq-intro">When they come to therapy, it's usually behind a more overt set of behaviours, such as avoiding, procrastinating, controlling others or unstoppable rumination or self-blaming. Sometimes it looks like an incomprehensible yet constant pattern of hurting others or putting ourselves in harmful situations.</p>
+        <p class="pq-intro">I've been deep in this myself, and my journey through Psychology gave me plenty of useful tools to build a much better life (internally and externally). I gladly use these tools now in my practice to help others live freer, happier lives.</p>
+        <p class="pq-intro">Most come looking for <strong>practical tools and exercises</strong>, not only a space to talk. Some have tried therapy before and felt it wasn't really moving anything. If that's you, feel free to ask me on our first call exactly how my sessions work.</p>
       </div>
 
       <div class="pq-card reveal">
-        <h2 class="pq-casos-title pq-center en-only">What we can work on</h2>
-        <p class="pq-formacion" id="pqTemasLead">These are the areas where I have the most experience and training:</p>
+        <p class="pq-formacion" id="pqFormacion">I hold a <strong>Licentiate Degree in Psychology</strong> (Argentina), a <strong>Master's Degree in General Health Psychology</strong> (Spain) and an <strong>International Diploma in Contextual Behavioural Psychotherapies</strong>. It is a thorough training in clinical and health psychology that prepares me to support people through a wide range of situations.</p>
+        <p class="pq-formacion" id="pqTemasLead">Even so, there are areas where I have more experience and training:</p>
         <ul class="areas-grid pq-temas">
           <li class="area-chip is-featured" id="pqTema1">Healthy relationships</li>
-          <li class="area-chip is-featured" id="pqTema2">Self-esteem and perfectionism</li>
+          <li class="area-chip is-featured" id="pqTema2">Self-esteem</li>
+          <li class="area-chip is-featured" id="pqTema3">Perfectionism</li>
           <li class="area-chip is-featured" id="pqTema4">Anxiety</li>
           <li class="area-chip is-featured" id="pqTema5">Emotional regulation</li>
           <li class="area-chip is-featured" id="pqTema6">Meaning in life</li>
           <li class="area-chip is-featured" id="pqTema7">Organisation, work and study</li>
-          <li class="area-chip is-featured" id="pqTema8">Feeling low or stuck</li>
+          <li class="area-chip is-featured" id="pqTema8">Depression</li>
           <li class="area-chip is-featured" id="pqTema9">Healthy habits</li>
         </ul>
-        <!-- Iván writes this paragraph himself (voice call 13 Nov); the current text stays until he sends it. -->
-        <p class="pq-intro pq-center en-only">Anxiety is an umbrella term that covers very different experiences, from worry and rumination in the evening to fear in social situations. Part of our work is understanding what's really happening for you, and in which moments.</p>
+        <p class="pq-intro en-only">All these terms are known in Behaviour Analysis as <strong>“umbrella terms”</strong>, meaning that they cover very different experiences for different people.</p>
+        <p class="pq-intro en-only">For some, perfectionism might mean <em>holding themselves to impossibly high standards</em>, which leads to self-esteem issues or an excessive need for control. For others, it might mean <em>being unable to make decisions and getting stuck in procrastination</em>.</p>
+        <p class="pq-intro en-only">Part of our work is understanding what’s really happening for you: in what way, in which moments, and how best to approach it. I don’t work with a “one-size-fits-all” approach, but with a personalised one, based on the principles and research of Evidence-Based Practice in Psychology (EBPP).</p>
       </div>
 
       <div class="pq-casos-head reveal">
@@ -1987,7 +2003,10 @@
         <h2 class="section-title reveal" id="pillarsTitle">A comprehensive approach</h2>
       </div>
       <div class="pq-card pq-card-tight reveal en-only">
-        <p class="pq-intro">My work draws on <strong>Acceptance and Commitment Therapy (ACT)</strong>, a contemporary form of CBT. Most of us learn that we first have to stop feeling anxious, afraid or sad, and only then can we start living the life we want – with ACT we try to turn that around. We'll look at your history too, but the main focus is how you want to live, starting now. Sessions are warm, active and collaborative (expect a bit of homework), and the work carries on in your daily life through small exercises.</p>
+        <p class="pq-intro">My work draws primarily on <strong>Acceptance and Commitment Therapy (ACT)</strong>, a contemporary form of CBT.</p>
+        <p class="pq-intro">Most of us learn that we first have to stop feeling anxious, afraid or sad, or to solve all our worries, and only then can we start living the life we want. But I don't want you to lose yourself in that trap, for pain and worry are constants in human life.</p>
+        <p class="pq-intro">ACT helps you empower yourself over difficult experiences, allowing ourselves to learn what we want from life and how to walk towards it, despite and managing pain the best way possible.</p>
+        <p class="pq-intro">This is a know-yourself-deeply but also change-your-life approach. Sessions are warm, active and collaborative (expect a bit of homework you'll do on your own, but we'll get the chance to revise together), and the work carries on in your daily life through small exercises.</p>
       </div>
       <div class="pillars">
         <div class="pillar reveal">
@@ -2012,9 +2031,9 @@
         <h2 class="section-title reveal">For expats in Barcelona</h2>
       </div>
       <div class="pq-card pq-card-tight reveal en-only">
-        <p class="pq-intro">Moving abroad is rarely only about work or studies. Often it's about wanting a better life, and sometimes that means leaving things you really love behind. Your people are far away, the language takes effort, and building a life again, with friends and a support network, takes time and can get lonely along the way.</p>
-        <p class="pq-intro">I left my hometown ten years ago and have lived in Argentina, the Netherlands and Spain since. Throughout that journey I learned how to manage and create a new life in a new place, and now I use it in my work.</p>
-        <p class="pq-intro">In my work with expats, relationships and self-esteem come up a lot, and so do settling in, work and stress.</p>
+        <p class="pq-intro">Living abroad is rarely only about work or studies. It's mostly about wanting a better life. Sometimes that means putting off some of your immediate needs and leaving things you really love behind, at least for a while. Your people and places are far away, the language takes effort (you might not even like it!), and building a life again, with friends and a support network, takes time and can get difficult along the way.</p>
+        <p class="pq-intro">I left my hometown ten years ago and have since lived in different parts of Argentina (it's a big country), the Netherlands and Spain, along with a quick pass through Scandinavia and some travelling. Throughout that journey I learned how to build a new life in a new place, and how to navigate the ups and downs of a semi-nomadic lifestyle without losing my mind.</p>
+        <p class="pq-intro">In my work with expats, how we relate to ourselves and others comes up very often, as do settling in, work and stress, all intertwined in a particular way in each case.</p>
       </div>
     </section>
 
@@ -2065,12 +2084,6 @@
         </a>
       </div>
 
-      <div class="section-head" id="about" style="margin-top: 64px;">
-        <h2 class="section-title reveal en-only">About me</h2>
-      </div>
-      <div class="pq-card reveal">
-        <p class="pq-formacion pq-left" id="pqFormacion">I hold a <strong>Licentiate Degree in Psychology</strong> (Argentina), a <strong>Master's Degree in General Health Psychology</strong> (Spain) and an <strong>International Diploma in Contextual Behavioural Psychotherapies</strong>. It is a thorough training in clinical and health psychology that prepares me to support people through a wide range of situations.</p>
-      </div>
 
       <div class="section-head en-only" id="fees" style="margin-top: 64px;">
         <h2 class="section-title reveal">Fees and the first call</h2>
@@ -2086,7 +2099,7 @@
       </div>
       <div class="pq-card faq-card reveal en-only">
         <h3 class="faq-q">What's the difference between a psychologist and a therapist?</h3>
-        <p class="pq-intro">A psychologist has a full university degree in Psychology. "Therapist" is a broader word: some therapists are psychologists, and others trained in one method through a shorter course. I'm a psychologist, registered in Catalonia and in Argentina, with a Master's in General Health Psychology, and trained in ACT, DBT and FAP.</p>
+        <p class="pq-intro">A psychologist has a full university degree in Psychology. "Therapist" is a broader word: some therapists are psychologists, and others trained in one method through a shorter course. I'm a psychologist, registered in Barcelona and in Argentina, with a Master's in General Health Psychology, and trained in ACT, DBT and FAP.</p>
         <h3 class="faq-q">Are sessions in English?</h3>
         <p class="pq-intro">Yes, sessions are in English or Spanish, whichever you prefer. And if you're feeling funny, we can do both.</p>
         <h3 class="faq-q">Are sessions online?</h3>
@@ -2094,7 +2107,7 @@
         <h3 class="faq-q">How often do we meet?</h3>
         <p class="pq-intro">Most research on therapy uses weekly sessions, so weekly is usually the best place to start. That said, not everyone has the time or budget for it, so feel free to book at whatever pace works for you, and we'll find the rhythm together.</p>
         <h3 class="faq-q">How do I find a therapist in English in Barcelona?</h3>
-        <p class="pq-intro">Look for someone registered with a professional college (in Catalonia, the COP-CAT has a <a href="https://www.copc.cat/contacte/carlos-ivan-waisman-195283" target="_blank" rel="noopener noreferrer">public register</a>), who works in your language, and whose way of working makes sense to you. A free intro call is the easiest way to find out if it clicks, with me or with anyone else.</p>
+        <p class="pq-intro">Look for someone registered with a professional college (in Barcelona, the COP-CAT has a <a href="https://www.copc.cat/contacte/carlos-ivan-waisman-195283" target="_blank" rel="noopener noreferrer">public register</a>), who works in your language, and whose way of working makes sense to you. A free intro call is the easiest way to find out if it clicks, with me or with anyone else.</p>
       </div>
     </section>
 
@@ -2531,15 +2544,15 @@
           "title": "Individual therapy: who is it for?",
           "verse": "<p>For those who don't just want<br>to stop feeling,<br>but to build a life<br>that is meaningful.</p> <p>For those who know that pain is,<br>at times,<br>unavoidable, and so<br>choose<br>to make it worth it.</p> <p>For those who know we only live<br>once.</p>",
           "formacion": "I hold a <strong>Licentiate Degree in Psychology</strong> (Argentina), a <strong>Master's Degree in General Health Psychology</strong> (Spain) and an <strong>International Diploma in Contextual Behavioural Psychotherapies</strong>. It is a thorough training in clinical and health psychology that prepares me to support people through a wide range of situations.",
-          "temasLead": "These are the areas where I have the most experience and training:",
+          "temasLead": "Even so, there are areas where I have more experience and training:",
           "tema1": "Healthy relationships",
-          "tema2": "Self-esteem and perfectionism",
+          "tema2": "Self-esteem",
           "tema3": "Perfectionism",
           "tema4": "Anxiety",
           "tema5": "Emotional regulation",
           "tema6": "Meaning in life",
           "tema7": "Organisation, work and study",
-          "tema8": "Feeling low or stuck",
+          "tema8": "Depression",
           "tema9": "Healthy habits",
           "casosTitle": "Some stories",
           "casos": {
