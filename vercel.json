@@ -9,6 +9,9 @@
     { "source": "/es", "destination": "/index.html" },
     { "source": "/en", "destination": "/index-en.html" },
     { "source": "/en/self-esteem-therapy", "destination": "/self-esteem-therapy-en.html" },
-    { "source": "/en/therapy-for-expats", "destination": "/therapy-for-expats-en.html" }
+    { "source": "/en/therapy-for-expats", "destination": "/therapy-for-expats-en.html" },
+    { "source": "/en/online-therapy", "destination": "/online-therapy-en.html" },
+    { "source": "/en/english-speaking-therapist-spain", "destination": "/english-speaking-therapist-spain-en.html" },
+    { "source": "/en/anxiety-therapy", "destination": "/anxiety-therapy-en.html" }
   ]
 }
