@@ -1585,7 +1585,7 @@
     /* Fee figures: never wrap; smaller than section titles; stack on narrow phones */
     .np-fees { gap: 16px; margin-bottom: 16px; }
     .np-fee { justify-content: center; }
-    .np-fee-big { white-space: nowrap; font-size: clamp(34px, 3.4vw, 44px); }
+    .np-fee-big { white-space: normal; text-wrap: balance; font-size: clamp(30px, 3vw, 40px); }
     /* Link card: sits close under the card it belongs to; lift only with a mouse; focus and press feedback */
     .pq-card + .np-link { margin-top: -52px; }
     .np-split + .np-link { max-width: 920px; margin-top: -52px; }
@@ -1735,16 +1735,16 @@
         <img class="hero-portrait" src="/media/ivan-portrait-chat-inner-circle-tight.png" alt="Portrait of Iván Waisman" width="465" height="465" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="hero-intro hero-intro-card" id="heroIntro">
-        <p>Hi! I'm Iván, an English-speaking therapist and registered psychologist (COP-CAT 36779).</p>
-        <p>I work online, in English or Spanish, with people who have moved to Barcelona from abroad.</p>
-        <p>Have a read, and feel free to book a first call with me at no cost.</p>
+        <p>Hi! I'm Iván. I'm an English-speaking therapist and registered psychologist (COP-CAT 36779).</p>
+        <p>I work online, in English or Spanish, with people who've moved to Barcelona from abroad.</p>
+        <p>Have a read, and feel free to book a first call with me at no cost. My priority is to help you!</p>
       </div>
       <div class="hero-actions">
         <a href="/intake" class="btn-primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg>
           <span>Book a free intro call</span>
         </a>
-        <a href="#online" class="btn-ghost">How sessions work online</a>
+        <a href="#online" class="btn-ghost">How online sessions work</a>
       </div>
       
     </section>
@@ -1761,8 +1761,8 @@
       </div>
       <div class="pq-card np-split reveal">
         <div class="np-split-text">
-        <p class="pq-intro">Among expats in Barcelona who get in touch with me, what comes up most so far is <strong>relationships and self-esteem</strong>. Often it's the same pattern turning up with a partner, at work or with new friends, or that feeling of never being quite enough.</p>
-        <p class="pq-intro">With expats in other places (say, the Netherlands), settling in, work and stress come up a lot too, and so does emotional dysregulation, meaning emotions that feel bigger than the moment calls for. Anxiety is often part of it, sometimes alone at home in the evening, sometimes around new people or a first date, and in my experience these things rarely come one at a time.</p>
+        <p class="pq-intro">Among expats in Barcelona who get in touch with me, what comes up most often is <strong>relationship and self-esteem difficulties</strong>. Often it's the same pattern turning up with a partner, at work or with new friends, or that feeling of never being quite enough. These struggles can get especially entangled when intercultural differences come up in romantic, friend or work relationships.</p>
+        <p class="pq-intro">In expat life in general, especially for people in very stressful professions or very demanding cities like Amsterdam or Barcelona, settling in, work and stress come up much more often than we'd like. With them come anxiety, emotional dysregulation and overwhelm.</p>
         </div>
         <ul class="np-split-side">
           <li class="area-chip is-featured">Healthy relationships</li>
@@ -1775,16 +1775,16 @@
       </div>
       <div class="np-link reveal">
         <div class="np-link-img" style="background-image: url('/media/bg-autumn-a.jpg')" aria-hidden="true"></div>
-        <p>If self-esteem or perfectionism is the main thing for you, there's a page on <a href="/en/self-esteem-therapy">therapy for self-esteem and perfectionism</a> too.</p>
+        <p>I also have a dedicated page on <a href="/en/self-esteem-therapy">self-esteem and perfectionism</a>, if those are the main issues for you.</p>
       </div>
       <div class="np-bandsec" style="--np-img: url('/media/bg-canal.jpg')">
         <div class="section-head">
           <h2 class="section-title reveal">Several homes</h2>
         </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Leaving home opens a door that is hard to close. You end up with several homes, and in each one you miss the others.</p>
-        <p class="pq-intro">Friendships live at a distance, language can get in the way, and loneliness is often less about lacking friends than about lacking a <strong>support network</strong>, the people who are simply there when a week goes badly.</p>
-        <p class="pq-intro">I work contextually, meaning we look at what you do and feel in the situations where it happens. And a move changes nearly all of those situations at once: your routines, the places, the people, even the language you live in.</p>
+        <p class="pq-intro">Leaving home opens a door that, for good or bad, is hard to close. We end up with several homes, and in each of them we miss the others.</p>
+        <p class="pq-intro">Friendships live at a distance, language can get in the way, and loneliness can hit either when we don't have someone to celebrate with or when we feel unsupported during harder times.</p>
+        <p class="pq-intro">Moving places changes so many variables in our lives, and that usually has a significant impact on our emotions, character and worldviews (I've changed many worldviews myself after travelling!). No wonder most expats feel they have different versions of themselves according to the language they use or which home they're at.</p>
       </div>
       </div>
       <div class="section-head" style="margin-top: 64px;">
@@ -1802,9 +1802,9 @@
           <figcaption class="np-map-legend" aria-hidden="true">Argentina · Spain · the Netherlands · Scandinavia, briefly</figcaption>
         </figure>
         <div class="np-map-text">
-        <p class="pq-intro">My own journey began about ten years ago, when I left my hometown. Since then, home has been the Netherlands, Spain and more than one corner of Argentina, with a brief Scandinavian detour and a fair amount of travelling in between.</p>
-        <p class="pq-intro">It has been marked by loneliness and uncertainty, but also by healthy ambition and unique experiences, and above all by working out where, with whom and how I want to build a life (mostly, <strong>better friendships and deeper relationships</strong>).</p>
-        <p class="pq-intro">The hardest part has been the uncertainty, and deciding what I'm willing to let go of as the cost of my choices. Your move won't look like mine, of course, and I won't assume it does. Along the way I learned how to start over somewhere new without losing track of what matters to me. Psychology gave me many of the skills for that, and I now use them in my practice.</p>
+        <p class="pq-intro">My own journey began about ten years ago, when I left my hometown. Due to family difficulties, I moved to Córdoba, a bigger city in Argentina far away from where I grew up. I stayed there and built a life for about 8 years, after which I decided to move to Europe. I lived for a while in the Netherlands, then Spain, had a brief Scandinavian detour and a fair amount of travelling in Europe, all whilst working with people around the world. Right now I have a semi-nomad lifestyle as I'm deciding where I want to settle.</p>
+        <p class="pq-intro">This journey I started 10 years ago, marked by the ambition of a healthy and fulfilling life, has had its fair amount of loneliness, stress and uncertainty. It still does, here and there. Looking back, I can see that this long journey that many of my clients and I have embarked upon has to do with not wanting to settle and conform to the bare minimum. We know <em>we don't have a moment to waste</em>, and want to <strong>explore what life has to offer us</strong>.</p>
+        <p class="pq-intro">Since every decision has its costs, the hardest part for me, in my own journey, has been dealing with the uncertainty and deciding what to let go and what to hold. Along the way, I've learned how to adapt and start over somewhere new without losing track of what matters to me and making sure my needs are met. Psychology and the network of expat therapists I've met along the way gave me so many tools I've used for myself and for my international clients.</p>
         </div>
       </div>
     </section>
@@ -1815,16 +1815,17 @@
       </div>
       <div class="np-panels-wrap reveal">
         <div class="pq-card np-panels-lead">
-          <p class="pq-intro">This is where therapy can help: clarifying what really matters to you, recognising what to accept or tolerate, and building the skills to adapt, from social to organisational ones.</p>
+          <p class="pq-intro">Whether indecision gets hold of you, uncertainty leaves no room for healthy sleep and peace of heart, or whether social life or work relationships get hard and emotions run wild, therapy helps. Expat life has many challenges and each situation is definitely unique and demands specific and tailored tools and skills.</p>
         </div>
         <div class="np-panels np-sized" style="--np-cols: minmax(0, 1.2fr) minmax(0, 1fr)">
           <div class="np-panel">
             <h3>My approach</h3><div class="np-panel-text">
-            <p>The approach I lean on most is <strong>Acceptance and Commitment Therapy</strong> (ACT), one of the "third-wave" cognitive behavioural therapies. Applied to living abroad, it means we don't wait for the homesickness or the uncertainty to go away before building the life you moved for. Painful feelings often point to what we care about most, so we walk in that direction and bring them along when they insist (they usually do).</p>
+            <p>My main therapeutic approach is <strong>Acceptance and Commitment Therapy</strong> (ACT), a cutting-edge cognitive-behavioural therapy. Applied to difficulties in expat life, it usually means we don't wait for the uncertainty or loneliness to go away in order to start building that life we've, in the first place, moved for. We ACT therapists have a saying: "We hurt where we care, and we care where we hurt". This means our pain, if properly listened to, can be a lighthouse, pointing in the direction of and clarifying what we value the most. Therapy helps decode pain to have a clearer sense of ourselves and decide better, whilst managing the pain so that it gets expressed in the best way and situations possible.</p>
 </div>          </div>
           <div class="np-panel">
             <h3>Practical sessions</h3><div class="np-panel-text">
-            <p>Sessions are practical: we start from your week, work out together what a habit or reaction is doing for you in each situation (a functional analysis, in our jargon), and you leave with a small exercise or two to try before we meet again.</p>
+            <p>Every session we build an agenda together. That means I ask first what you need or want from the session; sometimes you'll know, sometimes you won't. Don't worry, I'll always try to have something in mind.</p>
+            <p>We try to keep it flexible because life can change one week to the next one, without losing our overall direction. Once we know where to focus, whether it's something that's currently worrying you, or something you learnt or struggled with during the previous piece of homework, we do a "functional analysis", which simply means trying to understand more precisely what's going on and how to best address it. If we have time (depends on the session), we'll practice some skills or tools personalized to your situation (there are too many to name!) and you take a concrete exercise or complementary material into your week to practice or deepen your understanding of what was discussed in the session. Finally, we wrap up with main takeaways so you leave, whenever possible, with a greater sense of clarity.</p>
 </div>          </div>
         </div>
       </div>
@@ -1832,8 +1833,7 @@
         <h2 class="section-title reveal">Therapy in English, online</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Everyday life in a new language already takes effort, so sessions are in English (or Spanish, if that's easier), all of them online, by video call.</p>
-        <p class="pq-intro">Any device that handles a normal video call will do, a phone included, as long as you have somewhere you can talk freely.</p>
+        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only, in English or Spanish, by video call. You'll need a device with a camera and microphone, a pair of earphones and a comfortable spot private enough to be honest and allow yourself to be vulnerable.</p>
       </div>
     </section>
 
@@ -1848,12 +1848,12 @@
         <h2 class="section-title reveal">Getting started</h2>
       </div>
       <div class="np-fees reveal">
-        <div class="np-fee"><span class="np-fee-big">Free</span><span class="np-fee-small">first call, 20 to 25 minutes</span></div>
-        <div class="np-fee"><span class="np-fee-big">€40 to €75</span><span class="np-fee-small">a session of 45 to 50 minutes</span></div>
+        <div class="np-fee"><span class="np-fee-big">First call</span><span class="np-fee-small">Free · 20 to 25 minutes</span></div>
+        <div class="np-fee"><span class="np-fee-big">Normal sessions (50 min)</span><span class="np-fee-small">€40 to €75</span></div>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Sessions last 45 to 50 minutes and cost an estimated <strong>€40 to €75</strong>, and my intake form works out your exact fee.</p>
-        <p class="pq-intro">If you're not sure therapy is right for you, or whether we'd be a good match, feel free to book the <strong>free intro call</strong> (20 to 25 minutes). Ask me whatever you like about how I work, and we'll both get a feel for whether it clicks before you commit to anything. From then on, we go at your pace.</p>
+        <p class="pq-intro">I want to make sure that income or time are not an obstacle for you to continue your process. That's why I try to adapt both my fees and schedule to match your needs (more on that on my intake form). As for frequency, most studies on psychotherapy are on a weekly basis, so that's the suggested starting point; but it's not an obligation: you can come at your own rhythm.</p>
+        <p class="pq-intro">If you're not sure therapy is right for you, I gladly offer a first short meeting at no cost to see if we get along and to answer any questions you might have regarding my approach or your specific situation.</p>
         <p class="pq-intro">You can read more about me as an <a href="/en">English-speaking psychologist in Barcelona</a>.</p>
       </div>
       <div class="consultorio-btn reveal" style="margin: -24px 0 8px; text-align: center;">
@@ -1867,9 +1867,9 @@
       </div>
       <div class="pq-card faq-card reveal">
         <h3 class="faq-q">Can we carry on if I leave Barcelona?</h3>
-        <p class="pq-intro">Plenty of people who move once move again (I'm hardly one to talk). If you travel often, or move on from Barcelona, we can usually carry on online, so you don't have to start over with someone new in every city. Tell me on the intro call where you'll be and we'll check it works.</p>
-        <h3 class="faq-q">What is a red flag in therapy?</h3>
-        <p class="pq-intro">A few I'd look out for: a therapist who won't tell you their registration number (mine is COP-CAT 36779), who promises quick fixes, or who brushes off your doubts. You should always be able to say what isn't working and have it taken seriously. On my side, your freedom and comfort come before any goal we've set: you choose what to share and when, and if something feels off, you're always welcome to tell me so we can look at it together.</p>
+        <p class="pq-intro">Plenty of people who move once move again (I'm hardly one to talk, and sincerely hope to sit still someday). If you travel often, or move out of Barcelona, we can carry on online, so you don't have to start over with someone new in every city. Being an expat and a traveler myself, and having worked for years with expats, I do get what it feels like to be on the move.</p>
+        <h3 class="faq-q">How do I know if I'm an expat?</h3>
+        <p class="pq-intro">You don't need 10 years abroad to be an expat. Sometimes, all it takes is some traveling to feel that non-expat therapists don't get you. Whether it's the multiculturality or the new stressors of a different continent, or perhaps speaking multiple languages and belonging to an international subculture, it is my personal experience that sometimes people who've not traveled themselves can struggle getting a deeper grasp on how you see the world, your worries and the way you feel things. If that's you, you might benefit from a culture-informed or expat therapist.</p>
       </div>
     </section>
 

@@ -1585,7 +1585,7 @@
     /* Fee figures: never wrap; smaller than section titles; stack on narrow phones */
     .np-fees { gap: 16px; margin-bottom: 16px; }
     .np-fee { justify-content: center; }
-    .np-fee-big { white-space: nowrap; font-size: clamp(34px, 3.4vw, 44px); }
+    .np-fee-big { white-space: normal; text-wrap: balance; font-size: clamp(30px, 3vw, 40px); }
     /* Link card: sits close under the card it belongs to; lift only with a mouse; focus and press feedback */
     .pq-card + .np-link { margin-top: -52px; }
     .np-split + .np-link { max-width: 920px; margin-top: -52px; }
@@ -1737,7 +1737,7 @@
       <div class="hero-intro hero-intro-card" id="heroIntro">
         <p>Hi! I'm Iván, a registered psychologist (COP-CAT 36779). Self-esteem and perfectionism are two of the areas I work with most often.</p>
         <p>I work online with people in Barcelona who are looking for an English-speaking therapist, in English or Spanish, so it doesn't matter which corner of the city you call home.</p>
-        <p>On this page I'll go through what this work looks like, how I approach it and what it costs. If it sounds right, feel free to book a first short meeting at no cost.</p>
+        <p>On this page I'll walk you through what my approach usually looks like and my fees. If it speaks to you, feel free to book a first short meeting at no cost. My priority is to help you!</p>
       </div>
       <div class="hero-actions">
         <a href="/intake" class="btn-primary">
@@ -1760,16 +1760,16 @@
         <h2 class="section-title reveal">What self-esteem is</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Self-esteem is, roughly, the way you see and treat yourself: whether you feel you're enough as you are, or only once you've earned it, and then only until the next thing comes along. Like perfectionism, it's an umbrella term, and it means something a bit different for each person, so part of our work is finding out what it means for you.</p>
-        <p class="pq-intro">When it's low, your worth starts to hang on results, on other people's approval or on never getting anything wrong. Perfectionism is often tangled up with it: the bar keeps moving up, and a result that's "okay" <strong>never quite feels like enough</strong>.</p>
+        <p class="pq-intro">Self-esteem, self-criticism and perfectionism / high standards are all part of a family of experiences that relate to how we see and treat ourselves and our way of being in the world. People who come to therapy for these issues often can't find a way of functioning and crafting a meaningful life without being excessively hard on themselves and leaving important parts of their lives to the side.</p>
+        <p class="pq-intro">Our work in therapy involves seeing into your experience, history and goals, and figuring out what impact this is having on your life as a whole, and what a complete, balanced and meaningful life means to you, and how to best help you get there without losing yourself along the way.</p>
       </div>
       <div class="section-head" style="margin-top: 64px;">
-        <h2 class="section-title reveal">Who it's for</h2>
+        <h2 class="section-title reveal">Who it is for</h2>
       </div>
       <div class="pq-card np-split reveal">
         <div class="np-split-text">
-        <p class="pq-intro">The people who come to me for this are, more often than not, very hard on themselves. There's an <strong>inner critic</strong> commenting on everything they do, standards that move every time they get close to them (at work or in their studies), and a habit of people-pleasing, doing what others expect while what they want for themselves quietly drops off the list.</p>
-        <p class="pq-intro">Self-esteem, perfectionism and relationship difficulties usually come as a bundle, and they're also issues I've been through myself, which is a big part of why this work suits me.</p>
+        <p class="pq-intro">Most people who come to my practice are, more often than not, very hard on themselves. Whether it's an inner voice commenting and putting down everything they do, or a feeling of lacking and that the world is a tough place that will never give them what they need, or a habit of people-pleasing that always ends up in resentment and dissatisfaction, there's a vicious loop that brings about almost only pain and leaves next to no place for peace and fulfillment.</p>
+        <p class="pq-intro">These are issues I've been through myself; and since I've had such a hard time finding therapists who could help me with it, I've put a lot of work into understanding it and figuring out how to help myself and others.</p>
         </div>
         <ul class="np-split-side">
           <li class="area-chip is-featured">Self-esteem</li>
@@ -1783,14 +1783,13 @@
       <div class="pq-card reveal">
         <p class="pq-intro">Low self-esteem rarely comes to therapy under its own name. More often it hides behind a set of more visible habits:</p>
         <div class="np-tiles">
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-0" aria-expanded="true" aria-controls="np-hp-0"><span>Procrastinating</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-0" role="region" aria-labelledby="np-hb-0"><div class="np-tile-clip"><p>Putting things off, because starting means risking doing them badly.</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-1" aria-expanded="true" aria-controls="np-hp-1"><span>Avoiding being judged</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-1" role="region" aria-labelledby="np-hb-1"><div class="np-tile-clip"><p>Steering clear of anything where you might be judged (a test, a date, even a training session at the gym).</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-2" aria-expanded="true" aria-controls="np-hp-2"><span>Keeping control</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-2" role="region" aria-labelledby="np-hb-2"><div class="np-tile-clip"><p>Keeping a tight grip on the details, or on the people around you, so nothing can go wrong.</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-3" aria-expanded="true" aria-controls="np-hp-3"><span>Going over it again</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-3" role="region" aria-labelledby="np-hb-3"><div class="np-tile-clip"><p>A loop of rumination and self-blaming that carries on long after the moment has passed.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-0" aria-expanded="true" aria-controls="np-hp-0"><span>Procrastinating</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-0" role="region" aria-labelledby="np-hb-0"><div class="np-tile-clip"><p>Putting things off, because starting means risking doing them badly or messing up the next best opportunity.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-1" aria-expanded="true" aria-controls="np-hp-1"><span>Avoiding risk</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-1" role="region" aria-labelledby="np-hb-1"><div class="np-tile-clip"><p>Avoiding any situation where your sense of safety or pride might be at risk (a test or date, or even working out), no matter the cost.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-2" aria-expanded="true" aria-controls="np-hp-2"><span>Keeping control</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-2" role="region" aria-labelledby="np-hb-2"><div class="np-tile-clip"><p>Giving over your life to preventing your fears from becoming true (I know, this is a hard one for me).</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-3" aria-expanded="true" aria-controls="np-hp-3"><span>Going over it again</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-3" role="region" aria-labelledby="np-hb-3"><div class="np-tile-clip"><p>Getting stuck in loops of rumination and negative self-talk that carry on long after the moment has passed, usually being the better part of the suffering (even more than the situation itself).</p></div></div></div>
           <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-4" aria-expanded="true" aria-controls="np-hp-4"><span>In relationships</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-4" role="region" aria-labelledby="np-hb-4"><div class="np-tile-clip"><p>Going along with what the other person wants until you're no longer sure what you want, leaning on them to feel all right, or letting frustration build up until it spills over, which then feels like more proof that something is wrong with you.</p></div></div></div>
         </div>
-        <p class="pq-intro">If relationship issues are the main thing that brought you here, that's fine too: we work on them as part of this, in individual sessions.</p>
-        <p class="pq-intro">Quite often, the relationship with our parents is part of the picture as well, and when it is, it's something we can work on together.</p>
+        <p class="pq-intro">Our behaviour is dynamic, meaning it can present some of these forms in particular ways and change over time. Therapy helps and can assist with these changes too.</p>
       </div>
     </section>
 
@@ -1799,8 +1798,8 @@
         <h2 class="section-title reveal">If therapy hasn't helped before</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Some people come to me after months, or even years, of therapy that helped them understand themselves a lot but didn't change much in their day to day. Often what they're after is a different way of working: something to practise, <strong>tools and exercises</strong> to use during the week, alongside the talking. That's very much how I work, and you're welcome to ask me on the intro call what a session with me actually looks like.</p>
-        <p class="pq-intro">And if you've ever wondered whether you're doing therapy "right", or whether your therapist is quietly losing patience with you (perfectionism has a way of following us into the therapy room), that's something you can bring up with me too. If something doesn't feel right, I'll always welcome it with openness and care, and respecting you as a person matters more to me than any goal we've set.</p>
+        <p class="pq-intro">It's very often that people come to my practice after a long time, sometimes years, of therapy. Many times, they tell me they understand themselves better but feel the same. In all the different communities of therapists I belong to, such as ACT, Behavior Analysis, CFT, among others, we have a deep commitment to <strong>actually helping our clients <em>feel</em></strong> their lives are significantly different. That is a commitment I stand for in every minute of every session, and that I also have outside of our sessions, when planning or studying for them. If this experience somehow represents you, feel welcome to query directly about it on our intro call.</p>
+        <p class="pq-intro">On another note: perfectionism, self-doubt and compliance, among other common behaviours, tend to follow us into the therapy room (you might even wonder whether you're doing therapy "right"). That means sometimes you'll need something your therapist is not giving you. I want you to know my first priority is to help you; that means I'm committed to making sure you feel comfortable and get what you need from our space. About once per month I provide a feedback survey to know if we need to change course or add something, and to give you plenty of space to think about what you need from the space and might not be getting. Especially when there's something you dislike, I will always meet your feedback and needs lovingly and with warmth, and take the necessary steps to make sure you really benefit from our work.</p>
       </div>
       <div class="section-head" style="margin-top: 64px;">
         <h2 class="section-title reveal">How we work on it</h2>
@@ -1809,26 +1808,28 @@
         <div class="np-panels np-lead-wide">
           <div class="np-panel">
             <h3>The inner critic</h3><div class="np-panel-text">
-            <p>With self-esteem, most of us try to win the argument with the inner critic first, or to get rid of that not-enough feeling before we let ourselves do anything else. This is what we call the "control agenda": the idea that we need to escape what hurts before life can start. The trouble is that the harder we fight the critic, the louder it usually gets, and life slowly turns into a struggle to get away from it. If our sessions were only about silencing it, we'd both end up caught in that same fight.</p>
-            <p>The approach I use most is Acceptance and Commitment Therapy (ACT), a form of CBT that turns this around. We work on your relationship with that critic, so it can have its say without running your life, and on getting clear about <strong>what really matters to you</strong>, which then becomes the compass for small, real steps.</p>
+            <p>With self-esteem, most of us try to win the argument with the inner critic first, or to get rid of that not-enough feeling before we let ourselves do anything else. This is what we call the "control agenda": the idea that we need to escape what hurts before life can start. The issue is that the harder we fight the critic, the louder it gets. Sometimes we can't just fight fire with fire, and when we do, life slowly turns into a struggle to get away from pain. If our sessions were only about silencing it, we'd both end up caught in that same fight.</p>
+            <p>The approach I use most is Acceptance and Commitment Therapy (ACT), a rather new form of CBT that has a radically different focus: we set a direction forward, not oriented by escaping pain but on <strong>moving towards what really matters to you</strong>. In that journey, you'll learn how to understand your emotions and give them a place within your life without losing sense of direction, and without any emotions taking over. And, most importantly, how to take steps, however small they are, towards a more meaningful life.</p>
 </div>          </div>
           <div class="np-panel">
             <h3>In our sessions</h3><div class="np-panel-text">
-            <p>We start from what's happening in your life right now and do what we call a functional analysis, which simply means looking together at what you do, in which situations, and what it does for you. Then we practise skills such as assertive communication or self-soothing, and you take a small exercise into your week, so you can try them out in your own day to day (and we go over how it went the next time we meet).</p>
+            <p>Every session we build an agenda together. That means I ask first what you need or want from the session; sometimes you'll know, sometimes you won't. Don't worry, I'll always try to have something in mind.</p>
+            <p>We try to keep it flexible because life can change one week to the next one, without losing our overall direction. Once we know where to focus, whether it's something that's currently worrying you, or something you learnt or struggled with during the previous piece of homework, we do a "functional analysis", which simply means trying to understand more precisely what's going on and how to best address it. If we have time (depends on the session), we'll practice some skills or tools personalized to your situation (there are too many to name!) and you take a concrete exercise or complementary material into your week to practice or deepen your understanding of what was discussed in the session. Finally, we wrap up with main takeaways so you leave, whenever possible, with a greater sense of clarity.</p>
 </div>          </div>
           <div class="np-panel">
-            <h3>An honest answer</h3><div class="np-panel-text">
-            <p>People sometimes ask whether a therapist can really help with low self-esteem and confidence, or which therapy is best for it. There isn't one therapy that's best for everyone (people are far too different for that), and I can't promise you a result. What I can do is explain on our first call how I'd approach your situation, and be honest with you along the way about how things are going.</p>
+            <h3>Will therapy help with my self-esteem?</h3><div class="np-panel-text">
+            <p>Starting your therapy process isn't so much about getting fast results as about actually starting to move forward.</p>
+            <p>There is <strong>extensive research</strong> backing psychotherapy in helping with emotional difficulties. Still, there are many things we don't know yet. Our work in therapy is, thus, even when backed by science, a craft. You can count on me to be honest regarding my capabilities and limitations, and guide you in getting the help you need. Still, with some time and communication, most of the issues that people bring to my practice are worked through very well.</p>
 </div>          </div>
         </div>
       </div>
       <div class="np-bandsec" style="--np-img: url('/media/bg-autumn-c.jpg')">
         <div class="section-head">
-          <h2 class="section-title reveal">For perfectionists: a rhythm of your own</h2>
+          <h2 class="section-title reveal">For perfectionists: a healthy rhythm</h2>
         </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">For me, therapy means balancing acceptance and change. For people who are very focused on changing, like perfectionists, change can easily turn into one more thing to get right, so part of our work is learning to build <strong>a rhythm that's truly your own</strong>, rather than another standard to live up to.</p>
-        <p class="pq-intro">You decide what to share and when, and we decide the pace together.</p>
+        <p class="pq-intro">People with very high standards usually come to therapy trying to change quickly and efficiently, and that is really important for me too. Still, sometimes our processes have rhythms of their own.</p>
+        <p class="pq-intro">For perfectionists, therapeutic change can easily turn into one more task to get right, and becomes a new and heavy source of suffering, especially when they expose themselves too quickly ignoring their safety. Part of our work is usually acceptance and self-compassion too, and so I like to keep a stance of <strong>dialectics</strong>, which means to balance moving forward with learning to sit where we're at right now, even if we don't like it. It also means setting together a pace and gradual depth that is healthy for you.</p>
       </div>
       </div>
     </section>
@@ -1844,12 +1845,12 @@
         <h2 class="section-title reveal">Fees and the first call</h2>
       </div>
       <div class="np-fees reveal">
-        <div class="np-fee"><span class="np-fee-big">Free</span><span class="np-fee-small">first call, 20 to 25 minutes</span></div>
-        <div class="np-fee"><span class="np-fee-big">€40 to €75</span><span class="np-fee-small">a session of 45 to 50 minutes</span></div>
+        <div class="np-fee"><span class="np-fee-big">First call</span><span class="np-fee-small">Free · 20 to 25 minutes</span></div>
+        <div class="np-fee"><span class="np-fee-big">Normal sessions (50 min)</span><span class="np-fee-small">€40 to €75</span></div>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">As for cost, sessions with me are an estimated €40 to €75, and the exact fee comes out of my intake form, which works it out based on your situation. A session lasts 45 to 50 minutes, and we agree together how often we meet (weekly is the usual starting point, but it doesn't have to be).</p>
-        <p class="pq-intro">Before any of that, we can have a first short meeting at no cost, 20 to 25 minutes, so you can ask your questions and we can both see whether working together feels right.</p>
+        <p class="pq-intro">I want to make sure that income or time are not an obstacle for you to continue your process. That's why I try to adapt both my fees and schedule to match your needs (more on that on my intake form). As for frequency, most studies on psychotherapy are on a weekly basis, so that's the suggested starting point; but it's not an obligation: you can come at your own rhythm.</p>
+        <p class="pq-intro">I gladly offer a first short meeting at no cost to see if we get along and to answer any questions you might have regarding my approach or your specific situation.</p>
       </div>
       <div class="consultorio-btn reveal" style="margin: -24px 0 8px; text-align: center;">
         <a href="/intake" class="btn-primary">
@@ -1862,9 +1863,10 @@
       </div>
       <div class="pq-card faq-card reveal">
         <h3 class="faq-q">Should I see a psychologist or a therapist?</h3>
-        <p class="pq-intro">Either word can be the right one, but they don't mean quite the same thing. "Psychologist" means someone with a full degree in Psychology, while "therapist" is a wider word that also covers people who learned a single method on a short course (half a year, say). I'm a psychologist: I studied for a Licentiate Degree in Psychology in Argentina, then a Master's Degree in General Health Psychology in Spain, plus an International Diploma in Contextual Behavioural Psychotherapies, and I'm trained in ACT, DBT and FAP. I'm registered in Catalonia (COP-CAT 36779) and in Argentina (CPZA 2876). There's more about me on my <a href="/en">English-speaking psychologist in Barcelona</a> page.</p>
+        <p class="pq-intro">A <em>psychologist</em> is someone with a full degree in Psychology (usually a Bachelor plus a Masters), while <em>'therapist'</em> usually, but not always, refers to people with less extensive training backgrounds.</p>
+        <p class="pq-intro">Fitting in the first category, I studied for a Licentiate Degree in Psychology in Argentina, then trained for two years to get my International Diploma in Contextual Behavioural Psychotherapies (or Third Wave therapies; such as ACT, DBT and FAP) and then a Master's Degree in General Health Psychology in Spain, by homologation of my Licentiate. I'm officially registered in the Board of Psychologists of Barcelona (COP-CAT 36779) and in Argentina (CPZA 2876). More about me on my <a href="/en">English-speaking psychologist in Barcelona</a> page.</p>
         <h3 class="faq-q">Are sessions online or in person?</h3>
-        <p class="pq-intro">With people in Barcelona I work online only, by video call, and we can talk in English or Spanish. A phone, tablet or laptop with a camera does the job, plus a spot where you can be honest without wondering who's listening.</p>
+        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only, in English or Spanish, by video call. You'll need a device with a camera and microphone, a pair of earphones and a comfortable spot private enough to be honest and allow yourself to be vulnerable.</p>
       </div>
       <div class="np-link reveal">
         <div class="np-link-img" style="background-image: url('/media/bg-canal.jpg')" aria-hidden="true"></div>
