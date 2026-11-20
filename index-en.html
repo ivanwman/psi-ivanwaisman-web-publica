@@ -3087,7 +3087,10 @@
 
       var langBtn = document.getElementById('langToggle');
       if (langBtn) langBtn.addEventListener('click', function() {
-        setLang(langBtn.dataset.next === 'es' ? 'es' : 'en');
+        // The flag goes to the other language's own page (/ or /en), not an in-place translation (Iván, 20 Nov 2026).
+        var to = langBtn.dataset.next === 'es' ? 'es' : 'en';
+        try { localStorage.setItem('psi_lang', to); } catch(e) {}
+        location.href = to === 'en' ? '/en' : '/';
       });
       window.addEventListener('pointerdown', primeAudioFromGesture, { passive: true });
       window.addEventListener('mousedown', primeAudioFromGesture, { passive: true });

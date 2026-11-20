@@ -2582,6 +2582,7 @@
     function detectLang() {
       if (/^\/(en)(\/|$)/.test(location.pathname)) return 'en';
       if (/^\/(es)(\/|$)/.test(location.pathname)) return 'es';
+      if (location.pathname === '/' || location.pathname === '') return 'es';  // the Spanish home is always Spanish
       try { var s = localStorage.getItem('psi_lang'); if (s === 'en' || s === 'es') return s; } catch(e) {}
       return 'es';
     }
@@ -3027,7 +3028,10 @@
 
       var langBtn = document.getElementById('langToggle');
       if (langBtn) langBtn.addEventListener('click', function() {
-        setLang(langBtn.dataset.next === 'es' ? 'es' : 'en');
+        // The flag goes to the other language's own page (/ or /en), not an in-place translation (Iván, 20 Nov 2026).
+        var to = langBtn.dataset.next === 'es' ? 'es' : 'en';
+        try { localStorage.setItem('psi_lang', to); } catch(e) {}
+        location.href = to === 'en' ? '/en' : '/';
       });
       window.addEventListener('pointerdown', primeAudioFromGesture, { passive: true });
       window.addEventListener('mousedown', primeAudioFromGesture, { passive: true });
