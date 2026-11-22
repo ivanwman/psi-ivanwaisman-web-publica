@@ -1400,6 +1400,7 @@
     }
     #heroIntro.hero-intro-card p { margin: 0 0 10px; }
     #heroIntro.hero-intro-card p:last-child { margin-bottom: 0; }
+    #heroIntro.hero-intro-card a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
     @media (max-width: 640px) { #heroIntro.hero-intro-card { padding: 18px 18px; margin-bottom: 34px; } }
   </style>
   <style>
@@ -1411,7 +1412,7 @@
 
     /* Split card: text left, topic chips right */
     .np-split { max-width: 920px; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-    .np-split .pq-intro { text-align: left; text-align-last: auto; margin-left: 0; }
+    .np-split .pq-intro { text-align: justify; text-align-last: center; margin-left: auto; }
     .np-split-side { list-style: none; margin: 0; padding: 0 0 0 36px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
       border-left: 1px solid var(--border); }
     .np-split-side .area-chip { font-size: 21px; padding: 11px 22px; }
@@ -1760,10 +1761,15 @@
       <div class="section-head">
         <h2 class="section-title reveal">Who comes to me</h2>
       </div>
-      <div class="pq-card reveal">
-        <p class="pq-intro">Most people who come to my practice are very hard on themselves, and when they first write to me they usually name one of three things: perfectionism and self-esteem, anxiety, or difficulties in their relationships. Once we look closer, these often turn out to be tangled together, feeding each other in a loop that's hard to see from the inside.</p>
-        <p class="pq-intro">Whether it's a student caught in procrastination and disorganisation, someone going through a big change at work or in their studies, or someone worn down by chronic stress who wants healthier habits back, from sleep to routines, what many of them share is wanting concrete ways to understand and handle their emotions. Others come because they feel stuck, as if life had lost its sense of direction.</p>
-        <ul class="areas-grid pq-temas">
+      <div class="pq-card np-split reveal">
+        <div class="np-split-text">
+        <p class="pq-intro">Most people who come to my practice are <strong>very hard on themselves</strong>, and when they first write to me they usually name one of three things: perfectionism and self-esteem, anxiety, or difficulties in their relationships. Once we look closer, they usually come in a bundle, each one feeding the others.</p>
+        <p class="pq-intro">Whether it's a student caught in procrastination and disorganisation, someone going through a big change at work or in their studies, or someone worn down by chronic stress who wants healthier habits back, from sleep to routines, what many of them share is needing <strong>practical tools and exercises</strong> to manage their emotions better.</p>
+        <p class="pq-intro">Others come because they feel <em>stuck, not doing things, and as if their lives had lost meaning</em>.</p>
+        <p class="pq-intro">Some arrive after working with therapists that weren't working for them, and <strong>I gladly take the time to understand what they need this time</strong>.</p>
+        <p class="pq-intro">I also have pages on <a href="/en/self-esteem-therapy">self-esteem and perfectionism</a> and on <a href="/en/anxiety-therapy">anxiety therapy</a>, if one of those is the main thing going on.</p>
+        </div>
+        <ul class="np-split-side">
           <li class="area-chip is-featured">Self-esteem</li>
           <li class="area-chip is-featured">Perfectionism</li>
           <li class="area-chip is-featured">Healthy relationships</li>
@@ -1771,23 +1777,22 @@
           <li class="area-chip is-featured">Meaning in life</li>
           <li class="area-chip is-featured">Organisation, work and study</li>
         </ul>
-        <p class="pq-intro">Some arrive after working with a therapist who wasn't the right fit for them, and I gladly take the time to understand what they need this time. Not sure I'm the right person for you? That's exactly what our first call is for (and "no" is a perfectly good answer!). I also have pages on <a href="/en/self-esteem-therapy">self-esteem and perfectionism</a> and on <a href="/en/anxiety-therapy">anxiety therapy</a>, if one of those is the main thing going on.</p>
       </div>
       <div class="section-head" id="how-online-sessions-work" style="margin-top: 64px;">
         <h2 class="section-title reveal">How online sessions work</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Sessions are online, in English or Spanish, by video call on Google Meet, and they last 50 minutes. You'll need a device with a camera and microphone, a pair of earphones and a comfortable spot private enough to be honest and allow yourself to be vulnerable. <strong>Your comfort and your privacy come first</strong>, and you decide what to share and when.</p>
+        <p class="pq-intro">Sessions with people around Spain are online, in English or Spanish, by video call on Google Meet, and they last 50 minutes. You'll need a device with a camera and microphone, a pair of earphones and a comfortable spot private enough to be honest and allow yourself to be vulnerable. <strong>Your comfort and your privacy come first</strong>, and you decide what to share and when.</p>
         <p class="pq-intro">Every session we <strong>build an agenda together</strong>. That means I ask first what you need or want from the session; sometimes you'll know, sometimes you won't. Don't worry, I'll always try to have something in mind. We try to <strong>keep it flexible</strong> because life can change one week to the next one, without losing our overall direction.</p>
         <p class="pq-intro">Once we know where to focus, whether it's something that's currently worrying you, or something you learnt or struggled with during the previous piece of homework, we do a <strong>"functional analysis"</strong>, which simply means trying to understand more precisely what's going on and how to best address it. If we have time (depends on the session), we'll <strong>practice some skills or tools personalized to your situation</strong> (there are too many to name!) and you'll take a <strong>concrete exercise or complementary material</strong> into your week to practice or deepen your understanding of what was discussed in the session. Finally, we wrap up with <strong>main takeaways</strong> so you leave, whenever possible, with a greater sense of clarity.</p>
         <p class="pq-intro">There's more on the practical side on my page about <a href="/en/online-therapy">online therapy in Barcelona</a>.</p>
       </div>
       <div class="section-head" style="margin-top: 64px;">
-        <h2 class="section-title reveal">Does therapy online work?</h2>
+        <h2 class="section-title reveal">Does online therapy work?</h2>
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro"><mark class="np-confirm" title="To confirm with Iván">In my experience, for most of what people bring to my practice, the conversations, the exercises and the practice between sessions carry over to a video call very well, and the way we work doesn't really change.</mark></p>
-        <p class="pq-intro">Online also takes distance out of the picture: nobody needs to live near a therapist who works in English, and if you move cities or travel, we simply carry on where we left off.</p>
+        <p class="pq-intro">Online also means it doesn't matter where in Spain you live, and if you move cities or travel often, we can carry on where we left off.</p>
         <p class="pq-intro">It isn't the right place for an emergency, though. If you're in crisis or thinking about suicide, please call 112, or 024 for the suicide prevention line.</p>
       </div>
     </section>
@@ -1798,21 +1803,24 @@
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro">My main therapeutic approach is <strong>Acceptance and Commitment Therapy (ACT)</strong>, a contemporary form of CBT grounded in scientific psychology and behaviour therapy.</p>
-        <p class="pq-intro">Many of us get caught in what we call the "control agenda": the idea that painful thoughts and feelings must go away before life can start. The trouble is that the fight usually makes them bigger, and our attention ends up taken over by the pain. In ACT we look at them more like a map, pointing to <strong>what matters most to you</strong>, and then we work on how to take steps, however small they are, in that direction.</p>
+        <p class="pq-intro">In ACT we know that <em>difficult emotions are not the main problem, but us being controlled by them and leaving our lives aside is</em>.</p>
+        <p class="pq-intro">Our work together is less about getting rid of what hurts, and more about <strong>learning to carry it skilfully while building a life that feels meaningful</strong>, a therapy that helps you live more freely and <strong>become the leader of your own life</strong>.</p>
       </div>
-      <div class="section-head" style="margin-top: 64px;">
+      <div class="np-bandsec" style="--np-img: url('/media/bg-autumn-a.jpg')">
+        <div class="section-head">
         <h2 class="section-title reveal">Therapy in your own language</h2>
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro">Sessions are <strong>in English or in Spanish</strong>, whichever feels more like home, so the difficult conversations never have to happen in a language that still takes effort.</p>
         <p class="pq-intro">I left my hometown about ten years ago and have lived in a few countries since, so living between languages and homes is part of my own story too. If you moved to Spain from abroad, I also have a page on <a href="/en/therapy-for-expats">therapy for expats in Barcelona</a>.</p>
       </div>
+      </div>
       <div class="section-head" style="margin-top: 64px;">
-        <h2 class="section-title reveal">Registered psychologist (COP-CAT 36779)</h2>
+        <h2 class="section-title reveal">Registered psychologist</h2>
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro">I'm a registered psychologist, COP-CAT 36779, which anyone can check on the college's <a href="https://www.copc.cat/contacte/carlos-ivan-waisman-195283" target="_blank" rel="noopener noreferrer">public register</a>, and I'm also registered in Argentina (CPZA 2876).</p>
-        <p class="pq-intro">I studied for a Licentiate Degree in Psychology in Argentina, spent two years training for an International Diploma in Contextual Behavioural Psychotherapies (ACT, DBT and FAP among them) and then completed a Master's Degree in General Health Psychology in Spain.</p>
+        <p class="pq-intro">I studied for a <strong>Licentiate Degree in Psychology</strong> in Argentina, spent two years training for an <strong>International Diploma in Contextual Behavioural Psychotherapies</strong> (ACT, DBT and FAP among them) and then completed a <strong>Master's Degree in General Health Psychology</strong> in Spain, by homologation of my Licentiate.</p>
       </div>
     </section>
 
@@ -1845,11 +1853,11 @@
       </div>
       <div class="pq-card faq-card reveal">
         <h3 class="faq-q">Does Spain have therapy for English speakers?</h3>
-        <p class="pq-intro">Yes. In the larger cities some psychologists see people in English face to face, and others, like me, work online, so where you live matters much less. I work online, in English, with people all over Spain.</p>
+        <p class="pq-intro">Yes. In the larger cities some psychologists see people in English face to face, and others, like me, work online with people all over Spain, so where you live matters much less.</p>
         <h3 class="faq-q">What happens if the connection fails?</h3>
         <p class="pq-intro">Very rarely, in my experience, and restarting the call or moving to a spot with a stronger signal usually solves it. If nothing helps, we can carry on with audio only, as an exception, or find another time for the session.</p>
         <h3 class="faq-q">How much does a therapy session cost in Spain?</h3>
-        <p class="pq-intro">I can only speak for mine: €40 to €75 for a 50-minute online session, adapted to your situation through my intake form.</p>
+        <p class="pq-intro">My sessions cost an estimated €40 to €75 for 50 minutes, and your exact fee is worked out in my intake form, based on your situation.</p>
         <h3 class="faq-q">How can I check a therapist is registered?</h3>
         <p class="pq-intro">Ask for their registration number and the college it belongs to, and look them up on that college's public register (mine is COP-CAT 36779, linked above). If you live in Barcelona, there's a page written for you: <a href="/en">English-speaking psychologist in Barcelona</a>.</p>
       </div>

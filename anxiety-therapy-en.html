@@ -1400,6 +1400,7 @@
     }
     #heroIntro.hero-intro-card p { margin: 0 0 10px; }
     #heroIntro.hero-intro-card p:last-child { margin-bottom: 0; }
+    #heroIntro.hero-intro-card a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
     @media (max-width: 640px) { #heroIntro.hero-intro-card { padding: 18px 18px; margin-bottom: 34px; } }
   </style>
   <style>
@@ -1411,7 +1412,7 @@
 
     /* Split card: text left, topic chips right */
     .np-split { max-width: 920px; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-    .np-split .pq-intro { text-align: left; text-align-last: auto; margin-left: 0; }
+    .np-split .pq-intro { text-align: justify; text-align-last: center; margin-left: auto; }
     .np-split-side { list-style: none; margin: 0; padding: 0 0 0 36px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
       border-left: 1px solid var(--border); }
     .np-split-side .area-chip { font-size: 21px; padding: 11px 22px; }
@@ -1736,7 +1737,7 @@
       </div>
       <div class="hero-intro hero-intro-card" id="heroIntro">
         <p>Hi! I'm Iván. I'm a registered psychologist (COP-CAT 36779), and anxiety is one of the areas I work with most often.</p>
-        <p>I work online with people in Barcelona who are looking for an <a href="/en">English-speaking therapist</a>, in English or Spanish, wherever in the city you are.</p>
+        <p>I work online with people in Barcelona who are looking for an <a href="/en">English-speaking therapist</a>, in English or Spanish.</p>
         <p>On this page I'll walk you through how I understand anxiety, how we usually work on it and my fees. Feel free to book a first short meeting at no cost. My priority is to help you!</p>
       </div>
       <div class="hero-actions">
@@ -1760,21 +1761,22 @@
         <h2 class="section-title reveal">What anxiety is</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Anxiety is one of those words we all use, and it means something different for each of us. In Behaviour Analysis we call it an "umbrella term": it covers very diverse human experiences, from worrying about what might happen to feeling your body on alert in a meeting, a date or a test, and each of them needs to be understood carefully to see which psychological processes are really going on for you, and in which moments.</p>
-        <p class="pq-intro">That matters because anxiety isn't an enemy in itself. It often does a job for us: it can push us to prepare, to look after something important or to ask for help. The trouble starts when it shows up everywhere, including in the moments when we need to rest, enjoy or simply be with the people we love. Part of our work is understanding <strong>what your anxiety is doing in each situation</strong>, so we can keep what helps and loosen what doesn't.</p>
+        <p class="pq-intro">Anxiety is one of those words we all use, and it means something different for each of us. In Behaviour Analysis we call it an <strong>"umbrella-term"</strong>: it covers very diverse human experiences, <em>from worrying about what might happen to feeling your body on alert in a meeting, a date or a test</em>, and each of them needs to be understood carefully to see which psychological processes are really going on for you, and in which moments.</p>
+        <p class="pq-intro">That matters because anxiety isn't an enemy in itself. It often has a function for us: it can push us to prepare, to look after something important or to ask for help. The trouble starts when it shows up everywhere, including in the moments when we need to rest, enjoy or simply be with the people we love.</p>
+        <p class="pq-intro">Part of our work is understanding <strong>what your anxiety is doing in each situation</strong>, which in Behaviour Analysis we call its function.</p>
       </div>
       <div class="section-head" style="margin-top: 64px;">
         <h2 class="section-title reveal">How anxiety shows up</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">It differs from person to person, and it rarely shows up under its own name. These are some of the forms I see most often:</p>
+        <p class="pq-intro">That differs from person to person. These are some of the forms I see most often:</p>
         <div class="np-tiles">
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-0" aria-expanded="true" aria-controls="np-hp-0"><span>Evenings alone</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-0" role="region" aria-labelledby="np-hb-0"><div class="np-tile-clip"><p>Worrying, going over things again and again or getting caught in bigger questions about life when you're alone at home, especially in the evening, just when you were supposed to switch off.</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-1" aria-expanded="true" aria-controls="np-hp-1"><span>Around other people</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-1" role="region" aria-labelledby="np-hb-1"><div class="np-tile-clip"><p>Social anxiety in the situations that matter most, from meeting new people or dating to sport or exams, often tied up with how we see ourselves.</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-2" aria-expanded="true" aria-controls="np-hp-2"><span>Emotions running high</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-2" role="region" aria-labelledby="np-hb-2"><div class="np-tile-clip"><p>Anxiety that builds up until emotions feel bigger than the moment, and we end up overwhelmed, snapping at someone or shutting down.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-0" aria-expanded="true" aria-controls="np-hp-0"><span>Evenings alone</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-0" role="region" aria-labelledby="np-hb-0"><div class="np-tile-clip"><p>Worrying, rumination or existential anxiety, those bigger questions about life, when you're alone at home, especially in the evening.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-1" aria-expanded="true" aria-controls="np-hp-1"><span>Around other people</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-1" role="region" aria-labelledby="np-hb-1"><div class="np-tile-clip"><p>Social anxiety, often together with self-esteem issues, in situations of social interaction or social goals, such as fitness training, new romantic experiences or taking a test.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-2" aria-expanded="true" aria-controls="np-hp-2"><span>Emotions running high</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-2" role="region" aria-labelledby="np-hb-2"><div class="np-tile-clip"><p>Sometimes anxiety leads to <strong>emotional dysregulation</strong>: emotions feel bigger than the moment, and we end up overwhelmed, snapping at someone or shutting down.</p></div></div></div>
           <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-3" aria-expanded="true" aria-controls="np-hp-3"><span>Avoiding</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-3" role="region" aria-labelledby="np-hb-3"><div class="np-tile-clip"><p>Steering our lives around the things that make us anxious, which brings relief for a while and then makes our world a little smaller each time.</p></div></div></div>
         </div>
-        <p class="pq-intro">Anxiety and self-esteem very often come together, and when they do, I also work on them as one picture. I have a page on <a href="/en/self-esteem-therapy">self-esteem and perfectionism</a> too, if that sounds closer to what's going on for you.</p>
+        <p class="pq-intro">Anxiety and self-esteem very often come together, and when they do, we work on them together. If that's closer to what's going on for you, I also have a page on <a href="/en/self-esteem-therapy">self-esteem and perfectionism</a>.</p>
       </div>
     </section>
 
@@ -1784,9 +1786,9 @@
       </div>
       <div class="pq-card reveal">
         <div class="np-tiles">
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-4" aria-expanded="true" aria-controls="np-hp-4"><span>Why fighting it makes it louder</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-4" role="region" aria-labelledby="np-hb-4"><div class="np-tile-clip"><p>When anxiety shows up, most of us try to get rid of it first, and only then live our lives. This is what we call the "control agenda": the idea that we need to escape from painful thoughts and feelings before we can do anything else. The issue is that the harder we fight anxiety, the more it tends to grow and take over all our attention, and life slowly turns into a struggle to get away from pain, instead of a life we actually approach and enjoy. If our sessions were only about "solving" your anxiety, we'd both end up caught in that same struggle.</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-5" aria-expanded="true" aria-controls="np-hp-5"><span>Where your anxiety points</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-5" role="region" aria-labelledby="np-hb-5"><div class="np-tile-clip"><p>That's why one of the first things we do is uncover <strong>what matters to you</strong> in the situations where anxiety shows up. Anxiety, sadness or even anger usually work like a map, pointing towards what is really important to us. Once we know that, we have a direction to work towards, and that direction, not the absence of anxiety, becomes the compass.</p></div></div></div>
-          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-6" aria-expanded="true" aria-controls="np-hp-6"><span>In our sessions</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-6" role="region" aria-labelledby="np-hb-6"><div class="np-tile-clip"><p>Then we look at how you're relating to what you feel and think. I pay special attention to what cutting-edge research in Psychology calls transdiagnostic processes: is it rumination, worry, getting tangled up in your thoughts? Are there biological or environmental factors weighing in too? We decide together where to start, and we work on what your worry is doing in each context, so it can help where it helps (getting you to prepare, or to look after something important) and become quieter when you're trying to rest or enjoy time with others.</p><p>My main approach is Acceptance and Commitment Therapy (ACT), a contemporary form of CBT, and I'm also trained in DBT. Depending on what you need, we might practice exposure, mindfulness or self-soothing skills, and you take a concrete exercise into your week. Whatever we focus on, my commitment is that you feel comfortable and get what you need from our time together.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-4" aria-expanded="true" aria-controls="np-hp-4"><span>Why fighting it makes it louder</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-4" role="region" aria-labelledby="np-hb-4"><div class="np-tile-clip"><p>When dealing with anxiety, we are usually within what we call the <strong>"control agenda"</strong>, which stems from cognitive fusion: the idea that we need to escape from painful thoughts and feelings first. The issue is that this frequently leads to the pain growing and taking over all our attention, and <em>our life becomes a struggle to get away from pain, instead of approaching life and relating to others and ourselves in meaningful ways</em>.</p><p>That's why our work can't be about "solving" your anxiety: the whole process would get carried away by that same control agenda.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-5" aria-expanded="true" aria-controls="np-hp-5"><span>Where your anxiety points</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-5" role="region" aria-labelledby="np-hb-5"><div class="np-tile-clip"><p>That's why one of the first things we do is uncover <strong>what matters to you</strong> in the situations where anxiety shows up. Anxiety, sadness or even anger usually work like a map, pointing towards what is really important to us. Once we know that, we have a direction to work towards, and that clarity about what truly matters becomes <strong>the compass for taking real steps in that direction</strong>.</p></div></div></div>
+          <div class="np-tile"><h3 class="np-tile-h"><button type="button" class="np-tile-btn" id="np-hb-6" aria-expanded="true" aria-controls="np-hp-6"><span>Working on your anxiety</span><span class="np-chev" aria-hidden="true"></span></button></h3><div class="np-tile-panel" id="np-hp-6" role="region" aria-labelledby="np-hb-6"><div class="np-tile-clip"><p>Then we look at how you're relating to what you feel and think. I pay special attention to what cutting-edge research in Psychology calls <strong>transdiagnostic processes</strong>: is it rumination, worry, cognitive fusion (getting tangled up in our thoughts)? Are there biological or environmental factors weighing in too?</p><p><strong>We decide together where to start</strong>, and we work on <strong>the function of your worry in each context</strong>, so you can channel it in helpful ways (such as getting ready for something important) and turn away from it, or make it less intense, when you're trying to rest or enjoy time with others.</p><p>My main approach is Acceptance and Commitment Therapy (ACT), a contemporary form of CBT, and I'm also trained in DBT. Depending on what you need, we might practice exposure, mindfulness or self-soothing skills, and you'll take a concrete exercise into your week. <strong>Adapting to what you need matters to me</strong>, and respecting you as a person will always matter more than any progress or goal we've agreed on.</p></div></div></div>
         </div>
       </div>
       <div class="np-bandsec" style="--np-img: url('/media/bg-canal.jpg')">
@@ -1794,8 +1796,8 @@
         <h2 class="section-title reveal">Anxiety when you live abroad</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Expat life has its own way of feeding anxiety. Settling in, demanding jobs, a new language and being far from our people can keep us on alert for months, and uncertainty can leave little room for healthy sleep and peace of heart.</p>
-        <p class="pq-intro">Sessions are in English or Spanish, so nobody has to explain their anxiety in a language they're still getting used to. If living abroad is a big part of the picture, I also have a page on <a href="/en/therapy-for-expats">therapy for expats in Barcelona</a>.</p>
+        <p class="pq-intro">Living abroad can keep us on alert for a long time: settling in, demanding jobs, a new language and being far from our people all add up.</p>
+        <p class="pq-intro">Sessions are in English or Spanish, whichever you prefer. If living abroad is a big part of the picture, I also have a page on <a href="/en/therapy-for-expats">therapy for expats in Barcelona</a>.</p>
       </div>
       </div>
     </section>
@@ -1816,9 +1818,9 @@
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro">I want to make sure that income or time are not an obstacle for you to continue your process. That's why I try to adapt both my fees and schedule to match your needs (more on that on my intake form). As for frequency, most studies on psychotherapy are on a weekly basis, so that's the suggested starting point; but it's not an obligation: you can come at your own rhythm.</p>
-        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only, in English or Spanish, by video call. Here's more on how <a href="/en/online-therapy">online therapy in English</a> works with me.</p>
+        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only, in English or Spanish, by video call. You'll need a device with a camera and microphone, a pair of earphones and a comfortable spot private enough to be honest and allow yourself to be vulnerable. Here's more on how <a href="/en/online-therapy">online therapy in English</a> works with me.</p>
         <p class="pq-intro">I gladly offer a first short meeting at no cost to see if we get along and to answer any questions you might have regarding my approach or your specific situation.</p>
-        <p class="pq-intro">As for my training, I'm a registered psychologist (COP-CAT 36779), with a Licentiate Degree in Psychology from Argentina, an International Diploma in Contextual Behavioural Psychotherapies (ACT, DBT and FAP) and a Master's Degree in General Health Psychology from Spain.</p>
+        <p class="pq-intro">As for my training, I'm a registered psychologist (COP-CAT 36779), with a <strong>Licentiate Degree in Psychology</strong> from Argentina, an <strong>International Diploma in Contextual Behavioural Psychotherapies</strong> (ACT, DBT and FAP) and a <strong>Master's Degree in General Health Psychology</strong> (Spain, by homologation).</p>
       </div>
       <div class="consultorio-btn reveal" style="margin: -24px 0 8px; text-align: center;">
         <a href="/intake" class="btn-primary">
@@ -1831,9 +1833,9 @@
       </div>
       <div class="pq-card faq-card reveal">
         <h3 class="faq-q">Will therapy help with my anxiety?</h3>
-        <p class="pq-intro">Psychotherapy for emotional difficulties, anxiety among them, has extensive research behind it, and our work builds on that research while being adapted, session by session, to each person and their life. On our first call I'll tell you how I'd approach your situation, and along the way we'll keep checking together how it's going, so we can change course whenever we need to.</p>
+        <p class="pq-intro">Psychotherapy for emotional difficulties, anxiety among them, has <strong>extensive research</strong> behind it, and our work builds on that research while being adapted, session by session, to each person and their life. In every session we go through assessment, deciding where to focus, intervention and feedback, without a rigid structure and adapted to your specific needs, so we can keep checking together how it's going.</p>
         <h3 class="faq-q">How long does therapy for anxiety take?</h3>
-        <p class="pq-intro">There's no fixed number of sessions, since it depends on what's going on for you and what you want from therapy. Rather than chasing fast results, we focus on actually moving forward, and about once a month I ask for your feedback so we can see together whether we need to change course or add something.</p>
+        <p class="pq-intro">There's no fixed number of sessions, since it depends on what's going on for you and what you want from therapy. Rather than chasing fast results, we focus on <strong>actually moving forward</strong>, and about once a month I ask for your feedback so we can see together whether we need to change course or add something.</p>
         <h3 class="faq-q">Do I need medication for anxiety?</h3>
         <p class="pq-intro">I'm a psychologist, so I don't prescribe medication. If medication is something you'd like to consider, a psychiatrist or your GP is the right person to talk to, and if you're already taking it, please don't change or stop it without talking to whoever prescribed it.</p>
       </div>

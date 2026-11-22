@@ -1400,6 +1400,7 @@
     }
     #heroIntro.hero-intro-card p { margin: 0 0 10px; }
     #heroIntro.hero-intro-card p:last-child { margin-bottom: 0; }
+    #heroIntro.hero-intro-card a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
     @media (max-width: 640px) { #heroIntro.hero-intro-card { padding: 18px 18px; margin-bottom: 34px; } }
   </style>
   <style>
@@ -1411,7 +1412,7 @@
 
     /* Split card: text left, topic chips right */
     .np-split { max-width: 920px; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-    .np-split .pq-intro { text-align: left; text-align-last: auto; margin-left: 0; }
+    .np-split .pq-intro { text-align: justify; text-align-last: center; margin-left: auto; }
     .np-split-side { list-style: none; margin: 0; padding: 0 0 0 36px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
       border-left: 1px solid var(--border); }
     .np-split-side .area-chip { font-size: 21px; padding: 11px 22px; }
@@ -1737,8 +1738,8 @@
       </div>
       <div class="hero-intro hero-intro-card" id="heroIntro">
         <p>Hi! I'm Iván. I'm a registered psychologist (COP-CAT 36779), and I work online with people living in Barcelona, in English or Spanish.</p>
-        <p>If you're looking for an <a href="/en">English-speaking psychologist in Barcelona</a> and wondering how therapy through a screen actually works, on this page I'll walk you through it: the sessions, what you'll need, what happens if the connection fails, and my fees.</p>
-        <p>Feel free to book a first short meeting at no cost whenever you like. My priority is to help you!</p>
+        <p>If you're looking for an <a href="/en">English-speaking psychologist in Barcelona</a> and wondering how online therapy works, on this page I'll walk you through how our sessions usually go, what you'll need and my fees.</p>
+        <p>If it speaks to you, feel free to book a first short meeting at no cost. My priority is to help you!</p>
       </div>
       <div class="hero-actions">
         <a href="/intake" class="btn-primary">
@@ -1767,20 +1768,22 @@
         <p class="pq-intro">A few of the skills and exercises we use most:</p>
         <ul class="areas-grid pq-temas">
           <li class="area-chip is-featured">Exposure</li>
-          <li class="area-chip is-featured">Savouring</li>
+          <li class="area-chip is-featured">Savoring</li>
           <li class="area-chip is-featured">Mindfulness</li>
           <li class="area-chip is-featured">Values exercises</li>
           <li class="area-chip is-featured">Assertive communication</li>
           <li class="area-chip is-featured">Self-soothing</li>
         </ul>
-        <p class="pq-intro">And because we're each in our own space, I pay special attention to how people arrive and how they leave. If someone arrives particularly tired or shaken, a heavy session we had planned can turn into a gentler, more self-care oriented one, and if a session gets intense, we can finish with a relaxation exercise so nobody closes the laptop still stirred up.</p>
+        <p class="pq-intro">I also pay special attention to <strong>how you arrive and how you leave</strong>. If you come in <em>particularly tired or shaken</em> and we had a very intense session planned, we might change over to a more self-care oriented one, and if a session gets too intense, we can finish with a relaxation exercise so you leave feeling emotionally regulated.</p>
       </div>
-      <div class="section-head" style="margin-top: 64px;">
+      <div class="np-bandsec" style="--np-img: url('/media/bg-autumn-c.jpg')">
+        <div class="section-head">
         <h2 class="section-title reveal">What you'll need</h2>
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro">You'll need a device with a camera and microphone, a pair of earphones and a comfortable spot private enough to be honest and allow yourself to be vulnerable.</p>
-        <p class="pq-intro">The space matters more than the device. Part of therapy is being able to open up <strong>without worrying about what others might think</strong>, so what we're after is privacy more than perfect silence. If home doesn't allow for that, whether it's flatmates, family or thin walls, some people take their session from an office or from a quiet corner of a park, as long as nobody's within earshot.</p>
+        <p class="pq-intro">A quiet place is what matters most, and above all one private enough to allow ourselves to be vulnerable and honest <strong>without fear of what others might think</strong>. If you don't have a place of your own, or you're not comfortable at home, whether it's flatmates, family or thin walls, you can join from an office or a park, as long as you have enough privacy.</p>
+      </div>
       </div>
     </section>
 
@@ -1789,19 +1792,28 @@
         <h2 class="section-title reveal">Is online therapy right for you?</h2>
       </div>
       <div class="pq-card reveal">
-        <p class="pq-intro">Many people wonder whether therapy through a screen can be the same as sitting in the same room. <mark class="np-confirm" title="To confirm with Iván">From what I've seen in my own practice, the screen rarely gets in the way: we talk, practise skills and plan the week ahead just as we would in a room.</mark></p>
-        <p class="pq-intro">What online does change is the practical side. There's no crossing the city before and after a session, and if you move flats, neighbourhoods or even out of Barcelona, we can carry on together without a break.</p>
-        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only. If finding a private space is hard, or you know you'd feel better in the same room, tell me on our first call and we'll talk it through together, including whether someone else might suit you better, because what matters most to me is that you get the help you need.</p>
-        <p class="pq-intro">One thing online sessions aren't for is an emergency. If you're in crisis, or suicidal thoughts are getting close, please call 112 straight away, or 024, Spain's suicide prevention line.</p>
+        <p class="pq-intro">Many people wonder <em>whether therapy through a screen can be the same as sitting in the same room</em>. <mark class="np-confirm" title="To confirm with Iván">In my experience, working online rarely gets in the way: we talk, practice skills and plan the week ahead just as we would in the same room.</mark></p>
+        <p class="pq-intro">Online also makes the practical side easier: you don't need to cross the city before and after a session, and if you move flats, neighbourhoods or even out of Barcelona, we can carry on together without a break.</p>
+        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only.</p>
+        <p class="pq-intro">If finding a private space is hard, or you know you'd feel better in the same room, tell me on our first call and we'll look at it together. You can count on me to be honest and to <strong>guide you in getting the help you need</strong>, even if that means someone else.</p>
+        <p class="pq-intro">Online sessions are not the right place for an emergency. If you're in crisis or having suicidal thoughts, please call 112 straight away, or 024, Spain's suicide prevention line.</p>
       </div>
       <div class="section-head" style="margin-top: 64px;">
         <h2 class="section-title reveal">How I work</h2>
       </div>
-      <div class="pq-card reveal">
+      <div class="pq-card np-split reveal">
+        <div class="np-split-text">
         <p class="pq-intro">My main therapeutic approach is <strong>Acceptance and Commitment Therapy (ACT)</strong>, a contemporary form of CBT that grew out of behaviour therapy and scientific psychology. I'm also trained in DBT (Dialectical Behaviour Therapy) and FAP (Functional Analytic Psychotherapy), which, together with ACT, belong to what are often called the third-wave, or contextual, therapies.</p>
-        <p class="pq-intro">In practice, we don't argue with every thought or try to make difficult feelings disappear, which usually makes them louder anyway. Anxiety, sadness or even anger tend to work like <strong>a map of what matters to us</strong>, so we look at where they point, and then at how to walk in that direction without letting them take over. We explore your history too, while the focus stays on how you want to live from here on.</p>
+        <p class="pq-intro">In practice, we don't argue with every thought or try to make difficult feelings disappear, which usually makes things worse. Our minds are brilliant problem-solvers, but they also produce <em>harsh judgements, endless worries and old stories</em> that can end up running our lives. We learn to take what is useful and wise from our difficult emotions and thoughts, which often point to <strong>what we care about most</strong>, but without letting them steer our lives.</p>
+        <p class="pq-intro">We do explore your history, and every emotion is welcome and understood, but the main focus is on <strong>how you want to live, starting now</strong>.</p>
         <p class="pq-intro">I try to keep our sessions flexible enough to deal with things as they come, and structured enough to keep a steady direction.</p>
         <p class="pq-intro">If you'd like to read more about specific areas, I also have pages on <a href="/en/self-esteem-therapy">self-esteem and perfectionism</a>, <a href="/en/anxiety-therapy">anxiety therapy</a> and <a href="/en/therapy-for-expats">therapy for expats in Barcelona</a>.</p>
+        </div>
+        <ul class="np-split-side">
+          <li class="area-chip is-featured">ACT</li>
+          <li class="area-chip is-featured">DBT</li>
+          <li class="area-chip is-featured">FAP</li>
+        </ul>
       </div>
     </section>
 
@@ -1821,7 +1833,7 @@
       </div>
       <div class="pq-card reveal">
         <p class="pq-intro">I want to make sure that income or time are not an obstacle for you to continue your process. That's why I try to adapt both my fees and schedule to match your needs (more on that on my intake form). As for frequency, most studies on psychotherapy are on a weekly basis, so that's the suggested starting point; but it's not an obligation: you can come at your own rhythm.</p>
-        <p class="pq-intro">Sessions are booked directly in my calendar, and we agree on the frequency together, adjusting it as things change (every two weeks is an option too).</p>
+        <p class="pq-intro">You book your sessions on your own in my calendar, and we agree together on the frequency as needed.</p>
         <p class="pq-intro">I gladly offer a first short meeting at no cost to see if we get along and to answer any questions you might have regarding my approach or your specific situation.</p>
       </div>
       <div class="consultorio-btn reveal" style="margin: -24px 0 8px; text-align: center;">
@@ -1837,9 +1849,9 @@
         <h3 class="faq-q">What happens if the connection fails?</h3>
         <p class="pq-intro">It very rarely happens, and when it does, adjusting the connection or moving to a different room is usually more than enough. If it still fails, we can switch to an audio-only call as an exception, or postpone the session until the connection is working again.</p>
         <h3 class="faq-q">Can I get diagnosed online?</h3>
-        <p class="pq-intro">We start by understanding what's happening for you, in which situations and what keeps it going, rather than by looking for a label. I pay special attention to what cutting-edge research in Psychology calls transdiagnostic processes, such as rumination, worry or getting tangled up in our thoughts, which show up across many different diagnoses. That assessment doesn't stop after the first session: it carries on in every session, together with deciding where to focus and checking how it's going. <mark class="np-confirm" title="To confirm with Iván">If you need a formal diagnosis or a written report, feel free to ask me about it on our first call, and I'll tell you what I can and can't offer.</mark></p>
+        <p class="pq-intro">We start by understanding what's happening for you, in which situations and what keeps it going, rather than by looking for a label. I pay special attention to <strong>transdiagnostic processes</strong>, which means processes such as rumination, worry or cognitive fusion (getting tangled up in our thoughts) that show up across many different diagnoses and are studied by cutting-edge research in Psychology. That assessment doesn't stop after the first session: it carries on in every session, together with deciding where to focus and checking how it's going. <mark class="np-confirm" title="To confirm with Iván">If you need a formal diagnosis or a written report, feel free to ask me about it on our first call, and I'll tell you what I can and can't offer.</mark></p>
         <h3 class="faq-q">Can we meet in person in Barcelona?</h3>
-        <p class="pq-intro">Not for the time being: with people in Barcelona, all my sessions are online, wherever you are in the city. If you'd really rather sit in the same room as your psychologist, feel free to say so on our first call, and we'll look together at whether online could still work well.</p>
+        <p class="pq-intro">For the time being, sessions with people in Barcelona are online only. If you'd rather meet in the same room, please tell me on our first call or in my intake form (I ask about it at the end), and we'll look together at what works best for you.</p>
       </div>
       <div class="np-link reveal">
         <div class="np-link-img" style="background-image: url('/media/bg-autumn-b.jpg')" aria-hidden="true"></div>
