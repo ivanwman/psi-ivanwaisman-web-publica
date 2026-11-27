@@ -10,4 +10,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://psi.ivanwaisman.com/sitemap.xml
+Sitemap: https://www.ivanwaisman.com/sitemap.xml

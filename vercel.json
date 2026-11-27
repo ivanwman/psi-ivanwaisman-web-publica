@@ -3,7 +3,17 @@
   "redirects": [
     { "source": "/intake", "destination": "https://psi.ivanwaisman.com/intake", "permanent": false },
     { "source": "/privacidad", "destination": "https://psi.ivanwaisman.com/privacidad", "permanent": false },
-    { "source": "/privacy", "destination": "https://psi.ivanwaisman.com/privacy", "permanent": false }
+    { "source": "/privacy", "destination": "https://psi.ivanwaisman.com/privacy", "permanent": false },
+    { "source": "/portal", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/portal", "permanent": false },
+    { "source": "/dashboard", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/dashboard", "permanent": false },
+    { "source": "/feedback", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/feedback", "permanent": false },
+    { "source": "/form2", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/form2", "permanent": false },
+    { "source": "/:lang(en|es)/form2", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/:lang/form2", "permanent": false },
+    { "source": "/:lang(en|es)/intake", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/:lang/intake", "permanent": false },
+    { "source": "/tests/:path*", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/tests/:path*", "permanent": false },
+    { "source": "/portland", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/portland", "permanent": false },
+    { "source": "/en/portland", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/en/portland", "permanent": false },
+    { "source": "/en/therapy-for-expats", "has": [{ "type": "host", "value": "www.ivanwaisman.com" }], "destination": "https://psi.ivanwaisman.com/en/therapy-for-expats", "permanent": false }
   ],
   "rewrites": [
     { "source": "/es", "destination": "/index.html" },
